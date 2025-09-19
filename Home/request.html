@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request Help - Disaster Relief &amp; Resource Sharing Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --blue-trust: #3B82F6;
+            --green-hope: #10B981;
+            --orange-action: #F97316;
+            --red-alert: #EF4444;
+            --white-clarity: #FFFFFF;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": {
+                            "DEFAULT": "var(--blue-trust)",
+                            "light": "#60A5FA",
+                            "dark": "#2563EB"
+                        },
+                        "hope": "var(--green-hope)",
+                        "action": {
+                            "DEFAULT": "var(--orange-action)",
+                            "dark": "#EA580C"
+                        },
+                        "emergency": "var(--red-alert)",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E293B",
+                        "text-light": "#1E293B",
+                        "text-dark": "#E2E8F0",
+                        "subtle-light": "#64748B",
+                        "subtle-dark": "#94A3B8"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<main class="flex-grow">
+<section class="relative py-32 sm:py-48">
+<div class="absolute inset-0">
+<img alt="Emergency support volunteers helping people" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXdk4d7CWZYRa2lYqS1sU4elgV_OwTBPTGozf54YSfKnFZgZb_kz0ahrhI6YRiByLHfaJ3ZB_h83rPtFHRocN51xN7BgEiqpPMzfWm9sLzzC2t3TdFcKXCNi5OSBS55ajiETcSfXrbZ--ZF7I5uNEP56JVlhh2poyYXi7N3wWkZ80GVW5m9K4OAXJPtWSF1WXZbtkwGVmPCgfsLwE4mUY0XgUw53sdc40GjzpoqntjsbuR_HbocR_jODWmme4s50ZNlYqZDlHpDlk"/>
+<div class="absolute inset-0 bg-black/60"></div>
+</div>
+<div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">Request Help</h1>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto">
+<div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg text-center mb-12">
+<p class="text-lg font-medium text-primary-dark dark:text-primary-light">Fill in your details so our team can reach you quickly.</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-8 sm:p-12 rounded-2xl shadow-lg">
+<h2 class="text-3xl sm:text-4xl font-bold text-center text-text-light dark:text-text-dark mb-8">Help Request Form</h2>
+<form class="grid grid-cols-1 gap-y-6">
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Full Name</label>
+<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="full-name" name="full-name" placeholder="Enter your full name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-number">Phone Number / WhatsApp</label>
+<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="phone-number" name="phone-number" placeholder="Enter your phone or WhatsApp number" type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Email (Optional)</label>
+<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="email" name="email" placeholder="Enter your email address" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="location">Current Location</label>
+<div class="mt-1 flex gap-2">
+<input class="block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="location" name="location" placeholder="Enter your address or drop a pin" type="text"/>
+<button class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="button">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="hidden sm:inline">Use My Location</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="help-type">Type of Help Needed</label>
+<select class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="help-type" name="help-type">
+<option>Please select...</option>
+<option value="food">🍲 Food</option>
+<option value="shelter">🏠 Shelter</option>
+<option value="medical">⚕️ Medical Aid</option>
+<option value="rescue">🆘 Rescue</option>
+<option value="clothing">👕 Clothing</option>
+<option value="other">📋 Other</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="notes">Additional Notes</label>
+<textarea class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="notes" name="notes" placeholder="Any other details? e.g., number of people, specific needs..." rows="4"></textarea>
+</div>
+<button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-xl font-bold rounded-lg shadow-sm text-white bg-emergency hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emergency dark:focus:ring-offset-background-dark" type="submit">
+                                Submit Request
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-primary/10 dark:bg-primary/5">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+<h2 class="text-2xl sm:text-3xl font-bold text-text-light dark:text-text-dark">In Immediate Danger?</h2>
+<p class="mt-2 text-lg text-subtle-light dark:text-subtle-dark">If you are in a life-threatening situation, call the emergency helpline now.</p>
+<a class="mt-6 inline-flex items-center gap-3 px-8 py-4 bg-emergency text-white font-bold text-xl rounded-lg shadow-lg hover:bg-red-700 transition-colors" href="tel:1800-XXX-XXXX">
+<span class="material-symbols-outlined">call</span>
+Call Helpline Now
+</a>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto">
+<div class="bg-hope/10 dark:bg-hope/20 p-8 rounded-lg text-center">
+<h3 class="text-2xl font-bold text-hope-dark dark:text-hope-light mb-2">Live Status / Updates</h3>
+<p class="text-lg font-medium text-text-light dark:text-text-dark">Your request has been received. Our relief team will contact you soon.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-card-light dark:bg-card-dark/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Frequently Asked Questions</h2>
+<div class="max-w-3xl mx-auto space-y-6">
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-lg">
+<h3 class="font-bold text-lg text-text-light dark:text-text-dark">How fast will I get help?</h3>
+<p class="mt-2 text-subtle-light dark:text-subtle-dark">Our teams are working around the clock. We prioritize the most critical cases and aim to respond as quickly as possible. Response times can vary depending on the scale of the disaster and accessibility of the area.</p>
+</div>
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-lg">
+<h3 class="font-bold text-lg text-text-light dark:text-text-dark">Who will contact me?</h3>
+<p class="mt-2 text-subtle-light dark:text-subtle-dark">A verified ReliefHub volunteer or a team member from one of our partner organizations will contact you on the phone number you provided. Please keep your phone lines open.</p>
+</div>
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-lg">
+<h3 class="font-bold text-lg text-text-light dark:text-text-dark">Is my information safe?</h3>
+<p class="mt-2 text-subtle-light dark:text-subtle-dark">Yes, your privacy and security are important to us. The information you provide will only be used by our team to coordinate relief efforts and will not be shared with third parties.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-card-dark text-text-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-hope text-3xl">volunteer_activism</span>
+<h2 class="text-xl font-bold text-white">ReliefHub</h2>
+</div>
+<p class="mt-4 text-sm text-subtle-dark">Together for Relief, Together for Hope.</p>
+<p class="mt-2 text-sm text-subtle-dark">Emergency Helpline: 1800-XXX-XXXX</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
+<div>
+<h3 class="font-bold text-white">Quick Links</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Request Help</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Donate</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Get Involved</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Volunteer</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Partner with Us</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Resources</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Safety Guidelines</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">News &amp; Updates</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-800 pt-8 text-center text-sm text-subtle-dark">
+<p>© 2024 ReliefHub. All Rights Reserved. A commitment to community and resilience.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

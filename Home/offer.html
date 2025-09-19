@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Offer Help - Disaster Relief &amp; Resource Sharing Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --blue-trust: #3B82F6;
+            --green-hope: #10B981;
+            --white-clarity: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--blue-trust)",
+                        "hope": "var(--green-hope)",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                        "card-light": "var(--white-clarity)",
+                        "card-dark": "#1E293B",
+                        "text-light": "var(--text-primary)",
+                        "text-dark": "#E2E8F0",
+                        "subtle-light": "var(--text-secondary)",
+                        "subtle-dark": "#94A3B8"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<main class="flex-grow">
+<section class="relative py-32 sm:py-48">
+<div class="absolute inset-0">
+<img alt="Volunteers donating food and supplies" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATLhHwmTjSlgdkFqgOOHb8zmWIZKFFS-ifVCWYaovBFwtdaE6RODfiQKx0-Wpi2ROBBhV_V85AVqCs9X5PXwIMSWsXuR61ECVeggVQRTIe-74R3sLY0daZxn5Ic8lOq-MEGh9D6vH6GxJg9mUPaPH4HS3wSV-aF3c8g-gXAC7uC-ugO6vODUT2hIHnYVk2uu2tnbuhqziRk6vyFDvT8iv4QmSS2V750sid_pH2vtF6lt3GS8v0H49rhI7kXeZsZxpNwQImt1mawLc"/>
+<div class="absolute inset-0 bg-black/50"></div>
+</div>
+<div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">Offer Help</h1>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center">
+<p class="text-lg sm:text-xl text-subtle-light dark:text-subtle-dark">Your contribution can save lives. Share resources, time, or skills to support disaster-affected families.</p>
+</div>
+</div>
+</section>
+<section class="pb-16 sm:pb-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto">
+<div class="bg-card-light dark:bg-card-dark p-8 sm:p-12 rounded-2xl shadow-lg">
+<h2 class="text-3xl sm:text-4xl font-bold text-center text-text-light dark:text-text-dark mb-8">Offer Help Form</h2>
+<form class="grid grid-cols-1 gap-y-6">
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Full Name</label>
+<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="full-name" name="full-name" placeholder="Enter your full name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-email">Phone / Email</label>
+<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="phone-email" name="phone-email" placeholder="Your contact information" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="location">Location</label>
+<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="location" name="location" placeholder="Your city or neighborhood" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="help-type">Type of Help You Can Offer</label>
+<select class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="help-type" name="help-type">
+<option>Please select...</option>
+<option value="food">🍲 Food</option>
+<option value="clothes">👕 Clothes</option>
+<option value="medicines">⚕️ Medicines</option>
+<option value="shelter">🏠 Shelter</option>
+<option value="financial">💰 Financial Aid</option>
+<option value="volunteering">🤝 Volunteering</option>
+<option value="transportation">🚚 Transportation</option>
+<option value="other">📋 Other</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="quantity">Quantity / Availability</label>
+<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="quantity" name="quantity" placeholder="e.g., 10 blankets, available on weekends" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="notes">Additional Notes</label>
+<textarea class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="notes" name="notes" placeholder="Any other details about your offer" rows="4"></textarea>
+</div>
+<button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-xl font-bold rounded-lg shadow-sm text-white bg-hope hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hope dark:bg-primary dark:hover:bg-blue-500 dark:focus:ring-offset-background-dark" type="submit">
+                                Submit Offer
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-primary/5 dark:bg-primary/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Alternative Ways to Help</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md text-center">
+<div class="flex justify-center items-center h-16 w-16 bg-hope/10 text-hope mx-auto rounded-full mb-6">
+<span class="material-symbols-outlined text-4xl">payments</span>
+</div>
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-2">Donate Money 💰</h3>
+<p class="text-subtle-light dark:text-subtle-dark">Financial contributions help us procure essential supplies and deploy resources efficiently.</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md text-center">
+<div class="flex justify-center items-center h-16 w-16 bg-hope/10 text-hope mx-auto rounded-full mb-6">
+<span class="material-symbols-outlined text-4xl">diversity_3</span>
+</div>
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-2">Volunteer Your Time 🤝</h3>
+<p class="text-subtle-light dark:text-subtle-dark">Join our on-ground teams or help remotely. Your time and skills are invaluable.</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md text-center">
+<div class="flex justify-center items-center h-16 w-16 bg-hope/10 text-hope mx-auto rounded-full mb-6">
+<span class="material-symbols-outlined text-4xl">inventory_2</span>
+</div>
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark mb-2">Share Resources 🎒</h3>
+<p class="text-subtle-light dark:text-subtle-dark">Contribute essential items like food, water, and clothing to collection points near you.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Our Impact</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="bg-hope/10 dark:bg-hope/20 p-8 rounded-lg text-center">
+<p class="text-5xl sm:text-6xl font-black text-hope">1,000+</p>
+<p class="mt-2 text-lg font-medium text-text-light dark:text-text-dark">People received food</p>
+</div>
+<div class="bg-blue-500/10 dark:bg-blue-500/20 p-8 rounded-lg text-center">
+<p class="text-5xl sm:text-6xl font-black text-primary">500+</p>
+<p class="mt-2 text-lg font-medium text-text-light dark:text-text-dark">Got shelter from donations</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-card-light dark:bg-card-dark/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Success Stories</h2>
+<div class="max-w-3xl mx-auto space-y-8">
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-lg flex flex-col sm:flex-row items-center gap-6">
+<img alt="Volunteer photo" class="w-24 h-24 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpkm5IP8JuVqjDjHADjksFeS5JUvP7hpkWEzhY940uRgO7HdaEIT55IKn9Ds7gaQF-ZvrUF_WLTsI-Zj2EBbtBZS75Ts37R83-3paqokMItWBRTGldN9PvglLoyv5DJZvmmiNySFeBNVqQL0yTHnr_1zh85Vva_l9nk-zGpZysahspVVrupS7KDRp0qiA9K7C30LT9WeUI86p3_vRwLgA4XVlqe_YJIhSgKXGIgjlYmR_ICWZqLKkcaJuxtyNmEqF_5qiUSGbEq0c"/>
+<div>
+<blockquote class="text-subtle-light dark:text-subtle-dark">"Volunteering with ReliefHub was a deeply rewarding experience. Knowing I could help prepare and distribute meals to families who lost everything was incredibly humbling. The gratitude in their eyes is something I'll never forget."</blockquote>
+<p class="mt-4 font-bold text-text-light dark:text-text-dark">- Sarah J., Volunteer</p>
+</div>
+</div>
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-lg flex flex-col sm:flex-row items-center gap-6">
+<img alt="Donor photo" class="w-24 h-24 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtlNoQE05Vf3q8DSZB0FKqBv-rFfNeV_9G8vwKE9QzOub03bdqrYAOgLvhbpQXN_ArkNZrcF7Fp-ebgWpdiLGsPC8D3FdrhXNSqgcwXC6T9S8KLSRp5ZAVp04ZmH3kItg0qMXKoeTwRsJ2oDLt9jjmStB8fj902iTvt1pQHnY202hg0NR7XdkkaulAdBvz5iVYGCRTXyDPBw2UzIVk0Xiyba9bGxSRKpb9SrIHjRMABP03_dL9xGHPW71triiKVaZVnWCzXUYahO4"/>
+<div>
+<blockquote class="text-subtle-light dark:text-subtle-dark">"Our company organized a drive to collect blankets and warm clothing. Using the ReliefHub platform to offer them was seamless. The team coordinated the pickup and ensured our donation reached a remote community quickly. It felt great to make a direct impact."</blockquote>
+<p class="mt-4 font-bold text-text-light dark:text-text-dark">- Mark T., Donor</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-card-dark text-text-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-hope text-3xl">volunteer_activism</span>
+<h2 class="text-xl font-bold text-white">ReliefHub</h2>
+</div>
+<p class="mt-4 text-sm text-subtle-dark">Together for Relief, Together for Hope.</p>
+<p class="mt-2 text-sm text-subtle-dark">Emergency Helpline: 1800-XXX-XXXX</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
+<div>
+<h3 class="font-bold text-white">Quick Links</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Request Help</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Offer Help</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Get Involved</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Volunteer</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Donate</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Resources</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Safety Guidelines</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">News &amp; Updates</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-800 pt-8 text-center text-sm text-subtle-dark">
+<p>© 2024 ReliefHub. All Rights Reserved. A commitment to community and resilience.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

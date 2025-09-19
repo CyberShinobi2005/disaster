@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Find Shelter - Disaster Relief &amp; Resource Sharing Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --blue-trust: #3B82F6;
+            --green-safe: #10B981;
+            --red-alert: #EF4444;
+            --white-clarity: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--blue-trust)",
+                        "safe": "var(--green-safe)",
+                        "alert": "var(--red-alert)",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                        "card-light": "var(--white-clarity)",
+                        "card-dark": "#1E293B",
+                        "text-light": "var(--text-primary)",
+                        "text-dark": "#E2E8F0",
+                        "subtle-light": "var(--text-secondary)",
+                        "subtle-dark": "#94A3B8"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<main class="flex-grow">
+<section class="bg-primary/5 dark:bg-primary/10 py-16 sm:py-20 text-center">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-text-light dark:text-text-dark">Find Shelter</h1>
+<p class="mt-4 text-lg sm:text-xl text-subtle-light dark:text-subtle-dark">Locate safe shelters near you.</p>
+</div>
+</section>
+<section class="py-12 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 items-center">
+<div class="relative flex-grow w-full">
+<input class="w-full text-lg px-4 py-3 pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary" id="location-search" name="location-search" placeholder="Enter City / PIN Code" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-subtle-light dark:text-subtle-dark">search</span>
+</div>
+<button class="w-full sm:w-auto flex-shrink-0 flex items-center justify-center gap-2 px-6 py-3 border border-transparent text-lg font-bold rounded-lg shadow-sm text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark">
+<span class="material-symbols-outlined">my_location</span>
+                            Use My Location
+                        </button>
+</div>
+</div>
+</section>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<div class="flex flex-col gap-8">
+<div class="flex justify-between items-center">
+<h2 class="text-2xl font-bold">Nearby Shelters</h2>
+<div class="flex items-center gap-4">
+<select class="block w-full px-4 py-2 rounded-lg border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary text-sm">
+<option>All Types</option>
+<option value="medical">Medical</option>
+<option value="general">General</option>
+<option value="housing">Temporary Housing</option>
+<option value="ngo">NGO</option>
+<option value="govt">Govt.</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-md flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark">Hope Community Hall 🏠</h3>
+<span class="text-sm font-bold px-3 py-1 rounded-full bg-safe/10 text-safe">Available</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span>123 Main Street, Hopeville</p>
+<div class="flex flex-wrap gap-4 text-sm text-subtle-light dark:text-subtle-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">social_distance</span>2.5 km away</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span>50 Beds</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span>(123) 456-7890</p>
+<a class="mt-auto w-full text-center px-4 py-2 border border-transparent font-bold rounded-lg text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" href="#">Get Directions</a>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-md flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark">Safe Haven School 🏠</h3>
+<span class="text-sm font-bold px-3 py-1 rounded-full bg-alert/10 text-alert">Full</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span>456 Oak Avenue, Safe Town</p>
+<div class="flex flex-wrap gap-4 text-sm text-subtle-light dark:text-subtle-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">social_distance</span>5.1 km away</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span>100/100 People</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span>(987) 654-3210</p>
+<a class="mt-auto w-full text-center px-4 py-2 border border-slate-300 dark:border-slate-700 font-bold rounded-lg text-subtle-light dark:text-subtle-dark bg-slate-100 dark:bg-slate-800 cursor-not-allowed" href="#">Get Directions</a>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-md flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-text-light dark:text-text-dark">Green Valley Medical Camp 🏠</h3>
+<span class="text-sm font-bold px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-500">Limited</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span>789 Pine Road, Green Valley</p>
+<div class="flex flex-wrap gap-4 text-sm text-subtle-light dark:text-subtle-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">social_distance</span>8.0 km away</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span>15 Beds (Medical)</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span>(555) 123-4567</p>
+<a class="mt-auto w-full text-center px-4 py-2 border border-transparent font-bold rounded-lg text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" href="#">Get Directions</a>
+</div>
+</div>
+<div class="bg-red-100 dark:bg-alert/20 border-l-4 border-alert text-red-700 dark:text-red-300 p-4 rounded-r-lg" role="alert">
+<p class="font-bold">Emergency Notice</p>
+<p>If no shelter is available, call our helpline: <a class="font-bold underline" href="tel:1800-xxxxxx">1800-xxxxxx</a>.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 h-96 lg:h-auto rounded-xl overflow-hidden shadow-lg">
+<img alt="Map with shelter locations" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/pw/AP1GczOK4T7v9TzO2hW6G6jB4Xy-tC_Y7Bw6g3jBq9A_D5X_WjD4Zg_jR4B6T4X_A4B8C1Z6_U3_A_B_C_D_E_F_G_H_I_J_K_L_M_N_O_P_Q_R_S_T_U_V_W_X_Y_Z=w1000-h750-no"/>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-card-dark text-text-dark mt-auto">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-safe text-3xl">volunteer_activism</span>
+<h2 class="text-xl font-bold text-white">ReliefHub</h2>
+</div>
+<p class="mt-4 text-sm text-subtle-dark">Together for Relief, Together for Hope.</p>
+<p class="mt-2 text-sm text-subtle-dark">Emergency Helpline: <a class="hover:text-white" href="tel:1800-xxxxxx">1800-xxxxxx</a></p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
+<div>
+<h3 class="font-bold text-white">Quick Links</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Request Help</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Offer Help</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Get Involved</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Volunteer</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Donate</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Resources</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Safety Guidelines</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">News &amp; Updates</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-800 pt-8 text-center text-sm text-subtle-dark">
+<p>© 2024 ReliefHub. All Rights Reserved. A commitment to community and resilience.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
