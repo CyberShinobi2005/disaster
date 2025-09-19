@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donate - Disaster Relief &amp; Resource Sharing Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --blue-trust: #3B82F6;
+            --green-hope: #10B981;
+            --orange-action: #F97316;
+            --red-action: #EF4444;
+            --white-clarity: #FFFFFF;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": {
+                            "DEFAULT": "var(--blue-trust)",
+                            "light": "#60A5FA",
+                            "dark": "#2563EB"
+                        },
+                        "hope": "var(--green-hope)",
+                        "action": {
+                            "DEFAULT": "var(--orange-action)",
+                            "dark": "#EA580C"
+                        },
+                        "emergency": "var(--red-action)",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E293B",
+                        "text-light": "#1E293B",
+                        "text-dark": "#E2E8F0",
+                        "subtle-light": "#64748B",
+                        "subtle-dark": "#94A3B8"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-hope text-4xl">volunteer_activism</span>
+<h1 class="text-2xl font-bold text-text-light dark:text-text-dark">ReliefHub</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Resources</a>
+<a class="text-sm font-bold text-primary dark:text-primary" href="#">Donate</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="md:hidden flex items-center justify-center p-2 rounded-md text-subtle-light dark:text-subtle-dark hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative py-32 sm:py-48">
+<div class="absolute inset-0">
+<img alt="Volunteers helping people" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByNju9FiG5qrQIpVCZCfssYgGUb_6rri3hoRVshwco0t_PxUvFaLAX4jSppa0lLSc1AeXeTjmrLVeSpO0jBn_w4Cka5a1hSssh-xW3zMyb6K05--UQcPkQAr5Rjlh7pV6bpTdIAyIFOCASMA6Ta-iNVAvnXfFHpoaqQUy7NAWrOEGK_-xuSfneKeWuFfm4FPqTwthIFUsMgW24UZ4PyseUnptBf60BxJyHKtKyyWhfUyU9xK-CZ9lHJI6T6A8tmjBZkISKATR4RF0"/>
+<div class="absolute inset-0 bg-black/60"></div>
+</div>
+<div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">Support Disaster Relief – Donate Now</h1>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Why Your Donation Matters</h2>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">Your contribution provides food, shelter, and hope to disaster-affected families. Every donation, big or small, creates a significant impact and helps communities rebuild their lives.</p>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-card-light dark:bg-card-dark/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Donation Options</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-card-dark rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<span class="text-5xl text-hope">💰</span>
+<h3 class="mt-4 font-bold text-lg">Monetary Donation</h3>
+</div>
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-card-dark rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<span class="text-5xl text-hope">🍲</span>
+<h3 class="mt-4 font-bold text-lg">Food Supplies</h3>
+</div>
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-card-dark rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<span class="text-5xl text-hope">👕</span>
+<h3 class="mt-4 font-bold text-lg">Clothes &amp; Blankets</h3>
+</div>
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-card-dark rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<span class="text-5xl text-hope">💊</span>
+<h3 class="mt-4 font-bold text-lg">Medicines &amp; Medical Kits</h3>
+</div>
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-card-dark rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<span class="text-5xl text-hope">🏠</span>
+<h3 class="mt-4 font-bold text-lg">Shelter Support</h3>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto bg-card-light dark:bg-card-dark p-8 sm:p-12 rounded-2xl shadow-lg">
+<h2 class="text-3xl sm:text-4xl font-bold text-center text-text-light dark:text-text-dark">Make a Donation</h2>
+<div class="mt-8">
+<div class="flex items-center justify-center mb-8">
+<label class="font-bold mr-4 cursor-pointer" for="donation-type-one-time">One-Time</label>
+<div class="relative inline-block w-14 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-7 h-7 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-7 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer" for="toggle"></label>
+</div>
+<label class="font-bold ml-2 cursor-pointer text-hope" for="donation-type-monthly">Monthly</label>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<button class="w-full text-center px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-full font-bold hover:bg-hope hover:text-white dark:hover:bg-hope transition-colors">₹500</button>
+<button class="w-full text-center px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-full font-bold hover:bg-hope hover:text-white dark:hover:bg-hope transition-colors">₹1000</button>
+<button class="w-full text-center px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-full font-bold bg-hope text-white">₹5000</button>
+<button class="w-full text-center px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-full font-bold hover:bg-hope hover:text-white dark:hover:bg-hope transition-colors">Custom</button>
+</div>
+<form class="grid grid-cols-1 gap-y-6">
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Name</label>
+<div class="mt-1">
+<input autocomplete="name" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-hope focus:ring-hope sm:text-sm px-4 py-3" id="full-name" name="full-name" placeholder="Your Name" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Email</label>
+<div class="mt-1">
+<input autocomplete="email" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-hope focus:ring-hope sm:text-sm px-4 py-3" id="email" name="email" placeholder="Your Email" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-number">Phone Number</label>
+<div class="mt-1">
+<input autocomplete="tel" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-hope focus:ring-hope sm:text-sm px-4 py-3" id="phone-number" name="phone-number" placeholder="Your Phone Number" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="amount">Amount</label>
+<div class="mt-1">
+<input class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-hope focus:ring-hope sm:text-sm px-4 py-3" id="amount" name="amount" type="text" value="₹5000"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="payment-method">Payment Method</label>
+<div class="mt-1">
+<select class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-hope focus:ring-hope sm:text-sm px-4 py-3" id="payment-method" name="payment-method">
+<option>UPI</option>
+<option>Credit/Debit Card</option>
+<option>NetBanking</option>
+<option>Wallet</option>
+</select>
+</div>
+</div>
+<button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-white bg-action hover:bg-action-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-action dark:focus:ring-offset-background-dark" type="submit">
+                                        Secure Donation
+                                    </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-primary/10 dark:bg-primary/5">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Our Impact, Thanks to You</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-lg">
+<h3 class="text-5xl font-black text-primary">5,000+</h3>
+<p class="mt-2 text-lg font-semibold text-subtle-light dark:text-subtle-dark">Meals Served</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-lg">
+<h3 class="text-5xl font-black text-primary">200+</h3>
+<p class="mt-2 text-lg font-semibold text-subtle-light dark:text-subtle-dark">Families Sheltered</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-lg">
+<h3 class="text-5xl font-black text-primary">1,000+</h3>
+<p class="mt-2 text-lg font-semibold text-subtle-light dark:text-subtle-dark">Medical Kits Distributed</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-action rounded-2xl text-white text-center py-16 px-8">
+<h2 class="text-3xl sm:text-4xl font-bold">Every rupee you donate saves lives – Contribute Today!</h2>
+<button class="mt-8 px-10 py-4 border border-transparent text-xl font-bold rounded-full shadow-sm text-action bg-white hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white dark:focus:ring-offset-action">Donate Now</button>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-card-light dark:bg-card-dark/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark">Words from Our Supporters</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-xl shadow-md">
+<p class="text-subtle-light dark:text-subtle-dark italic">"Seeing my donation make a real difference is incredibly rewarding. ReliefHub's transparency is why I trust them."</p>
+<p class="mt-4 font-bold text-text-light dark:text-text-dark">- Priya S.</p>
+</div>
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-xl shadow-md">
+<p class="text-subtle-light dark:text-subtle-dark italic">"The process was so easy and secure. It feels good to know I'm helping families in need during tough times."</p>
+<p class="mt-4 font-bold text-text-light dark:text-text-dark">- Amit K.</p>
+</div>
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-xl shadow-md">
+<p class="text-subtle-light dark:text-subtle-dark italic">"I switched to a monthly donation because I believe in their ongoing mission. Consistent support is crucial."</p>
+<p class="mt-4 font-bold text-text-light dark:text-text-dark">- Rina M.</p>
+</div>
+</div>
+<div class="mt-16 text-center">
+<h3 class="text-2xl font-bold text-subtle-light dark:text-subtle-dark">Our Trusted Partners</h3>
+<div class="flex justify-center items-center gap-8 sm:gap-12 flex-wrap mt-8 grayscale opacity-70">
+<img alt="Transistor" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1GBLUlt3vjOtWyJ3TbF773XMcM_9zcGNRkBrIljafeHyYs9lFguA96seWEtf0Nw_X6lUxQVrGiZLLW54vxSF_oDHShGoBiHsxR2jgurgWT_hIpeXWIFqrlLh2yJPgopptiYUpc2B-LZvpNQcmgRsUJ2ELFBWkiUjQ86AGuJqcm5Mwni4UuSFCLJkFXtqJwAUYc7Pp57m0X9Vk_mxOZ4vUCA5vL0Bz_8coxR-Njsy5a3I7KE6WaKI4_SnhCkv1YT1Um1dPqn7xvB8"/>
+<img alt="Reform" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUGt9rlPHrqQPeX9ZGr2c5cvsgkpJHZVtIyNPVH28DqgepTUvKb8BSe6uGPhc7hEjPj3a3ytzgIhoMZVLZEJY_O36pzKQgIW0PbG27jdhBq4XMFHUA_7mpJ_EZuN2WE7i3TvnxbCsFJdHbtX9cqqC5cd3a7oPnPJr6_8-Ld96SG40ZHWiLPnjiQR_6D3ibMKSzZIDSD1WCnJvp1uo1NM9SCRP3DtlUYRiSdlvCQyyiD68dpeS_xXeTWJQaF4XlwxckBFwbervfmDU"/>
+<img alt="Tuple" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDgmtxp82rnM7TCEV39qbUF9Ic2hGOAcLJVwLD33jWXlWdivgayWYbq0uKlaJHwTZo1cVT6mBRQed3GgOxDXPAAFPCdHZND9Kmk98fEbRXXSCT6PjF9eYnkJwDD2lRFj2YoBpIYozVmH_Zo_E5encnWEI95nVhezrEbsGW-3SI2YYap6KhyNVbbWT6qV8-oy7zkZNzg5syrpL4mG78WOFke3i9Qg7sTIgZaZAL57PQ6LQkOsGqgTobzTJWhkwjwSkcLPu0UlX2iqM"/>
+<img alt="SavvyCal" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChREGqTN39odk2WRR0Fj0nUEJLAESc4r-P-THcTAZIBuffAPOC6Rpom88qBhpolHjUXwhB-Lyv4twh_ajv99SC0ANVUUABkkBj8CRs64yr0hAqMH2GTxV0ah5Jb6Ii2FXeqIXEUq5fz4XBFwcxkKVqB4gmLb3xzLZEuse0B98ZidtjQuQwCeLw6eRT2g2lMyyBnXtsmoS6N9jWV1bqIKKWVd5LdN5ibDyd57rtiSEFlg1eYkpy85ArvTSatSJtPCJWkkOHn1e82Fk"/>
+<img alt="Statamic" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoryXDxM2h1_BXYOx5iEqT_C3K8ROcHcjj2xVFVTUA8dbxRYKl029OIyiyQtZzIf84c8nuv5q6xhZbI1z-iryr2xKrzxpTIaJIDEF3x2HR5q50lPvR0Yq9CiQ6R_PKrLAK2EVI9Wswa9OIxzVqiJwNXav1ch2rGgqTO1lEIBO4wkaxTeKYFCG3ozwIXYsvOLJdfwIZaTqFdpjTykHsJl4sgmw-WrPPesuWTXRYCRbsNCyPresdysQajZyztSMwSUxpIW0sjc2uRQ4"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-card-dark text-text-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-hope text-3xl">volunteer_activism</span>
+<h2 class="text-xl font-bold text-white">ReliefHub</h2>
+</div>
+<p class="mt-4 text-sm text-subtle-dark">All donations are used for verified disaster relief efforts.</p>
+<p class="mt-2 text-sm text-subtle-dark">Emergency Helpline: 1800-XXX-XXXX</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
+<div>
+<h3 class="font-bold text-white">Quick Links</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="index.html">Home</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="aboutus.html">About Us</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="do.html">Donate</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Get Involved</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Volunteer</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Partner with Us</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Resources</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Request Help</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">News &amp; Updates</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-800 pt-8 text-center text-sm text-subtle-dark">
+<p>© 2024 ReliefHub. All Rights Reserved. A commitment to community and resilience.</p>
+</div>
+</div>
+</footer>
+</div>
+<style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: var(--green-hope);
+        }
+        .toggle-checkbox:checked+.toggle-label {
+            background-color: var(--green-hope);
+        }
+    </style>
+
+</body></html>
