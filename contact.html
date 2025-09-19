@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Disaster Relief &amp; Resource Sharing Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --blue-primary: #3B82F6;
+            --red-emergency: #EF4444;
+            --white-clarity: #FFFFFF;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": {
+                            "DEFAULT": "var(--blue-primary)",
+                            "light": "#60A5FA",
+                            "dark": "#2563EB"
+                        },
+                        "emergency": "var(--red-emergency)",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E293B",
+                        "text-light": "#1E293B",
+                        "text-dark": "#E2E8F0",
+                        "subtle-light": "#64748B",
+                        "subtle-dark": "#94A3B8"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">volunteer_activism</span>
+<h1 class="text-2xl font-bold text-text-light dark:text-text-dark">ReliefHub</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Resources</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Volunteer</a>
+<a class="text-sm font-bold text-primary dark:text-primary" href="#">Contact</a>
+</nav>
+<button class="md:hidden flex items-center justify-center p-2 rounded-md text-subtle-light dark:text-subtle-dark hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="bg-emergency/90 text-white py-3 px-4 text-center font-bold">
+                In case of emergency, call: 1800-XXXXXX
+            </div>
+<section class="relative bg-primary/10 py-32 sm:py-40">
+<div class="absolute inset-0">
+<img alt="Helping hands" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/uW65Txdli73M-p5sT2h0u7iO2NwjzH7T6Xz9sL_ci86X1e2jCqL_D3bLpW7b_w8Z9aN4rZ0aD1zI2eX3gP_yR7tZ9jI_yC"/>
+<div class="absolute inset-0 bg-black/50"></div>
+</div>
+<div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">Get in Touch With Us</h1>
+</div>
+</section>
+<section class="py-20 sm:py-24 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2">
+<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Send us a Message</h2>
+<form class="mt-8 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Name</label>
+<div class="mt-1">
+<input autocomplete="name" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="full-name" name="full-name" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Email</label>
+<div class="mt-1">
+<input autocomplete="email" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="email" name="email" type="email"/>
+</div>
+</div>
+<div class="sm:col-span-2">
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-number">Phone Number</label>
+<div class="mt-1">
+<input autocomplete="tel" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="phone-number" name="phone-number" type="text"/>
+</div>
+</div>
+<div class="sm:col-span-2">
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="subject">Subject</label>
+<div class="mt-1">
+<input class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="subject" name="subject" type="text"/>
+</div>
+</div>
+<div class="sm:col-span-2">
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="message">Message</label>
+<div class="mt-1">
+<textarea class="block w-full rounded-xl border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="message" name="message" rows="4"></textarea>
+</div>
+</div>
+<div class="sm:col-span-2">
+<button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">
+                                        Send Message
+                                    </button>
+</div>
+</form>
+</div>
+<div class="space-y-8">
+<div>
+<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Quick Contact Info</h2>
+<div class="mt-6 space-y-4">
+<div class="flex items-start gap-4 p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl mt-1">call</span>
+<div>
+<h3 class="font-bold text-lg">Helpline Number</h3>
+<p class="text-subtle-light dark:text-subtle-dark">1800-XXX-XXXX</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl mt-1">email</span>
+<div>
+<h3 class="font-bold text-lg">Email Address</h3>
+<p class="text-subtle-light dark:text-subtle-dark">contact@reliefhub.org</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl mt-1">location_on</span>
+<div>
+<h3 class="font-bold text-lg">Office / Relief Center</h3>
+<p class="text-subtle-light dark:text-subtle-dark">123 Relief St, Hope City, HC 54321</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.225881881906!2d-122.419415484681!3d37.77492957975953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c1b2b3c2d%3A0x8f7c9e1f5f5f5e5e!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 sm:py-24 bg-card-light dark:bg-card-dark/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Support &amp; FAQ</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">Find answers to common questions.</p>
+</div>
+<div class="max-w-3xl mx-auto space-y-4">
+<details class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm cursor-pointer" open="">
+<summary class="flex items-center justify-between font-bold text-lg">
+                                How can I request help?
+                                <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-subtle-light dark:text-subtle-dark">You can request help by filling out the form on our 'Request Help' page or by calling our emergency helpline. Please provide as much detail as possible so we can assist you effectively.</p>
+</details>
+<details class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-lg">
+                                How can I donate?
+                                <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-subtle-light dark:text-subtle-dark">We appreciate your support! You can donate through our secure online portal on the 'Donate' page. We accept various payment methods. Your contribution goes directly to funding our relief efforts.</p>
+</details>
+<details class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-lg">
+                                How can I volunteer?
+                                <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-subtle-light dark:text-subtle-dark">Volunteers are the backbone of our organization. Please visit the 'Volunteer' page to see current opportunities and fill out the application form. We'll get in touch with you for orientation and training.</p>
+</details>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-card-dark text-text-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">volunteer_activism</span>
+<h2 class="text-xl font-bold text-white">ReliefHub</h2>
+</div>
+<p class="mt-4 text-sm text-subtle-dark">Together for Relief, Together for Hope.</p>
+<div class="mt-6 flex space-x-4">
+<a class="text-subtle-dark hover:text-white transition-colors" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
+<a class="text-subtle-dark hover:text-white transition-colors" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+<a class="text-subtle-dark hover:text-white transition-colors" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm6.924 12.385c.004-.153.006-.307.006-.462 0-3.376-2.73-6.113-6.105-6.113S5.82 8.547 5.82 11.923c0 .155.002.309.006.462h.01a6.08 6.08 0 00-1.127 3.518c0 .15.01.298.02.445.093 1.25.56 2.404 1.29 3.393.003.004.007.008.01.012.753.99 1.77 1.75 2.95 2.227.13.053.262.1.396.147a6.096 6.096 0 006.848 0c.134-.047.266-.094.396-.147 1.18-.476 2.2-1.237 2.95-2.227.003-.004.007-.008.01-.012.73-.99 1.197-2.143 1.29-3.393.01-.147.02-.295.02-.445.003-1.22-.38-2.35-1.11-3.267l-.017-.025zm-6.918 4.011c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm4.188-7.615a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z" fill-rule="evenodd"></path></svg></a>
+<a class="text-subtle-dark hover:text-white transition-colors" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.3 4.7A5.99 5.99 0 0013.3 2.7l-.3.1c-2.4.7-4.4 2.3-5.8 4.2-.8 1-1.5 2.2-1.9 3.4-.2.5-.3 1-.3 1.6 0 .5.1 1 .2 1.4.3 1.5 1 2.9 2.1 4.1.3.4.7.7 1.1 1.1l.1.1c1.3 1.1 2.8 1.9 4.4 2.3.5.1 1 .2 1.5.2.4 0 .9-.1 1.3-.2.9-.3 1.8-.8 2.6-1.4 1.6-1.3 2.8-3.1 3.4-5.1.1-.5.2-1 .2-1.5 0-2-1.2-3.8-2.6-5.1zM9.5 17.2c-.4 0-.8-.1-1.2-.4-1.6-1.2-2.4-3.1-2.4-5.2s.8-3.9 2.4-5.2c.4-.3.8-.4 1.2-.4s.8.1 1.2.4c1.6 1.2 2.4 3.1 2.4 5.2s-.8 3.9-2.4 5.2c-.4.3-.8.4-1.2.4zm5.8-1.1c-.2-.2-.5-.3-.7-.3-.7 0-1.3.6-1.3 1.3s.6 1.3 1.3 1.3c.3 0 .5-.1.7-.3l3.2-3.2c.2-.2.3-.5.3-.7 0-.7-.6-1.3-1.3-1.3s-1.3.6-1.3 1.3c0 .2.1.5.3.7l-1.9 1.9z"></path></svg></a>
+<a class="text-subtle-dark hover:text-white transition-colors" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
+<div>
+<h3 class="font-bold text-white">Quick Links</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Donate</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Get Involved</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Volunteer</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Partner with Us</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white">Resources</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Request Help</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Safety Guides</a></li>
+<li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">News &amp; Updates</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-800 pt-8 text-center text-sm text-subtle-dark">
+<p>© 2024 ReliefHub. All Rights Reserved. A commitment to community and resilience.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

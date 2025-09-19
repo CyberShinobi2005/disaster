@@ -2,60 +2,64 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Us - Disaster Relief &amp; Resource Sharing Hub</title>
+<title>Resources - Disaster Relief &amp; Resource Sharing Hub</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": {
-              "light": "#2DD4BF",
-              "DEFAULT": "#14B8A6",
-              "dark": "#0D9488"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": {
+                            "DEFAULT": "#DC2626", // Red
+                            "light": "#F87171",
+                            "dark": "#991B1B"
+                        },
+                        "secondary": {
+                            "DEFAULT": "#3B82F6", // Blue
+                            "light": "#60A5FA",
+                            "dark": "#2563EB"
+                        },
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0F172A",
+                        "card-light": "#F8FAFC",
+                        "card-dark": "#1E293B",
+                        "text-light": "#1E293B",
+                        "text-dark": "#E2E8F0",
+                        "subtle-light": "#64748B",
+                        "subtle-dark": "#94A3B8"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
             },
-            "secondary": {
-              "light": "#60A5FA",
-              "DEFAULT": "#3B82F6",
-              "dark": "#2563EB"
-            },
-            "background-light": "#F8FAFC",
-            "background-dark": "#0F172A",
-            "card-light": "#FFFFFF",
-            "card-dark": "#1E293B",
-            "text-light": "#1E293B",
-            "text-dark": "#E2E8F0",
-            "subtle-light": "#64748B",
-            "subtle-dark": "#94A3B8"
-          },
-          fontFamily: {
-            "display": ["Public Sans", "sans-serif"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.5rem",
-            "lg": "0.75rem",
-            "xl": "1rem",
-            "2xl": "1.5rem",
-            "full": "9999px"
-          },
-        },
-      },
-    }
-  </script>
+        }
+    </script>
 <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-  </style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
 <div class="flex flex-col min-h-screen">
-<header class="sticky top-0 z-50 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-20">
 <div class="flex items-center gap-3">
@@ -63,11 +67,11 @@
 <h1 class="text-2xl font-bold text-text-light dark:text-text-dark">ReliefHub</h1>
 </div>
 <nav class="hidden md:flex items-center gap-6">
-<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-sm font-medium text-primary dark:text-primary font-bold transition-colors" href="#">About Us</a>
-<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Resources</a>
-<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Volunteer</a>
-<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-secondary dark:hover:text-secondary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-secondary dark:hover:text-secondary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium text-secondary dark:text-secondary font-bold transition-colors" href="#">Resources</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-secondary dark:hover:text-secondary transition-colors" href="#">Volunteer</a>
+<a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-secondary dark:hover:text-secondary transition-colors" href="#">Contact</a>
 </nav>
 <button class="md:hidden flex items-center justify-center p-2 rounded-md text-subtle-light dark:text-subtle-dark hover:bg-slate-100 dark:hover:bg-slate-800">
 <span class="material-symbols-outlined">menu</span>
@@ -76,171 +80,156 @@
 </div>
 </header>
 <main class="flex-grow">
-<section class="relative bg-black/50 text-white py-32 sm:py-40 lg:py-48">
+<section class="relative bg-secondary/10 py-32 sm:py-40 lg:py-48">
 <div class="absolute inset-0">
-<img alt="Volunteers working together during a disaster relief operation" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl8I1k1rGf_uig7bcLCvyOFg0oXzH9hnY4w5s14ISILq2jlgMsKq0MNTWLTtNTr0sSfdADBYG0DmCW40EnFjfHV9facT07RSb2Es53rBXzSrDRFIor3ody8cQPgyoNtEKprC1NkgnNbt6fxlcPvCWFGmZ-I5oAkv_MccIDbUMkvPah4BrfENqrojbVoHIyaYlQB-1fipMBlmQj0RmihFkz4vno7mNBmfI7jGn9GeDAeCeiPXhk0bGKPkriOqjfwXgbvsmKcFyc1kU"/>
+<img alt="Illustration of community members sharing resources" class="w-full h-full object-cover opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9iJpB6_0yvH_VnQfP1N6y5RzTzCjF4G7eWzP4wKxZ3z-5q8eG7oP0sTzBwA9iRjVdYgH1hC_I-eKxSjRzXyC1jEa0eFwV_P1oN-rA_S0iLwXqYpZgG4sB5aT_M3l-sT-xJ_B_A_W-k="/>
 </div>
 <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">About Us – Who We Are</h1>
-<p class="mt-4 max-w-2xl mx-auto text-lg text-slate-200">Connecting communities, sharing resources, and building resilience in the face of disaster.</p>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-secondary-dark dark:text-white">Available Resources</h1>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-slate-300">Find the help you need, right when you need it. Browse, search, and connect with available aid.</p>
 </div>
 </section>
 <section class="py-20 sm:py-24 lg:py-28 bg-background-light dark:bg-background-dark">
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-<div class="text-center md:text-left">
-<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Our Mission &amp; Vision</h2>
-<p class="mt-4 text-lg text-subtle-light dark:text-subtle-dark">We are dedicated to creating a rapid-response network that effectively channels aid and support to communities impacted by disasters, ensuring no one is left behind.</p>
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Resource Categories</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">Quickly find what you're looking for by selecting a category.</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-3xl">rocket_launch</span>
-</div>
-<div>
-<h3 class="font-bold text-lg">Mission</h3>
-<p class="mt-1 text-subtle-light dark:text-subtle-dark">To provide immediate, efficient, and transparent relief by connecting resources and volunteers with those in need.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0 w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-3xl">visibility</span>
-</div>
-<div>
-<h3 class="font-bold text-lg">Vision</h3>
-<p class="mt-1 text-subtle-light dark:text-subtle-dark">A future where every community is prepared for and resilient to disasters, supported by a global network of solidarity and hope.</p>
-</div>
-</div>
-</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+<a class="group block text-center bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-primary-dark">restaurant</span>
+<h3 class="mt-3 font-bold text-lg text-text-light dark:text-text-dark">Food</h3>
+</a>
+<a class="group block text-center bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-primary-dark">checkroom</span>
+<h3 class="mt-3 font-bold text-lg text-text-light dark:text-text-dark">Clothes</h3>
+</a>
+<a class="group block text-center bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-primary-dark">vaccines</span>
+<h3 class="mt-3 font-bold text-lg text-text-light dark:text-text-dark">Medicines</h3>
+</a>
+<a class="group block text-center bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-primary-dark">cottage</span>
+<h3 class="mt-3 font-bold text-lg text-text-light dark:text-text-dark">Shelter</h3>
+</a>
+<a class="group block text-center bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-primary-dark">paid</span>
+<h3 class="mt-3 font-bold text-lg text-text-light dark:text-text-dark">Financial Aid</h3>
+</a>
+<a class="group block text-center bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-primary-dark">emergency</span>
+<h3 class="mt-3 font-bold text-lg text-text-light dark:text-text-dark">Emergency Kits</h3>
+</a>
 </div>
 </div>
 </section>
-<section class="py-20 sm:py-24 lg:py-28 bg-slate-50 dark:bg-card-dark/50">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Our Core Values</h2>
-<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">These principles guide every action we take and every connection we make.</p>
-<div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-<span class="material-symbols-outlined text-primary text-5xl">favorite</span>
-<h3 class="mt-4 font-bold text-xl">Compassion</h3>
-<p class="mt-2 text-subtle-light dark:text-subtle-dark">We act with empathy and kindness, putting people at the heart of our work.</p>
+<section class="py-12 bg-card-light dark:bg-card-dark/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<form class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="location">Location</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-secondary focus:ring-secondary sm:text-sm" id="location" name="location" placeholder="Enter City or Zip Code" type="text"/>
 </div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-<span class="material-symbols-outlined text-primary text-5xl">verified</span>
-<h3 class="mt-4 font-bold text-xl">Transparency</h3>
-<p class="mt-2 text-subtle-light dark:text-subtle-dark">We believe in open communication and accountability in all our operations.</p>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="category">Category</label>
+<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-secondary focus:ring-secondary sm:text-sm" id="category" name="category">
+<option>All Categories</option>
+<option>Food</option>
+<option>Clothes</option>
+<option>Medicines</option>
+<option>Shelter</option>
+<option>Financial Aid</option>
+<option>Emergency Kits</option>
+</select>
 </div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-<span class="material-symbols-outlined text-primary text-5xl">groups</span>
-<h3 class="mt-4 font-bold text-xl">Community</h3>
-<p class="mt-2 text-subtle-light dark:text-subtle-dark">We foster collaboration and empower local communities to lead their recovery.</p>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="urgency">Urgency</label>
+<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-secondary focus:ring-secondary sm:text-sm" id="urgency" name="urgency">
+<option>All</option>
+<option>Urgently Needed</option>
+<option>High Priority</option>
+<option>Medium Priority</option>
+</select>
 </div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-<span class="material-symbols-outlined text-primary text-5xl">local_shipping</span>
-<h3 class="mt-4 font-bold text-xl">Responsibility</h3>
-<p class="mt-2 text-subtle-light dark:text-subtle-dark">We are committed to the responsible and effective delivery of aid and resources.</p>
-</div>
-</div>
+<button class="w-full sm:w-auto justify-center flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-secondary hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary dark:focus:ring-offset-background-dark" type="submit">
+<span class="material-symbols-outlined">search</span> Search
+                        </button>
+</form>
 </div>
 </section>
 <section class="py-20 sm:py-24 lg:py-28">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">How We Work</h2>
-<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">Our streamlined process ensures that help gets where it's needed, fast.</p>
-<div class="mt-16 relative">
-<div class="absolute left-1/2 top-7 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-700 hidden md:block"></div>
-<div class="grid md:grid-cols-4 gap-8 md:gap-0">
-<div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
-<div class="relative w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 z-10">1</div>
-<div class="md:text-left">
-<h3 class="font-bold text-xl">Alert</h3>
-<p class="mt-1 text-subtle-light dark:text-subtle-dark">A disaster is reported and verified.</p>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2">
+<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark mb-8">Resource List</h2>
+<div class="space-y-6">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<div class="flex-grow">
+<h3 class="text-xl font-bold">Canned Soup &amp; Vegetables</h3>
+<p class="text-subtle-light dark:text-subtle-dark mt-1">Quantity Available: 250 units</p>
+<p class="text-subtle-light dark:text-subtle-dark mt-1">Location: Springfield Community Center</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Available</span>
 </div>
 </div>
-<div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
-<div class="relative w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 z-10">2</div>
-<div class="md:text-left">
-<h3 class="font-bold text-xl">Collect Resources</h3>
-<p class="mt-1 text-subtle-light dark:text-subtle-dark">We activate our network for donations.</p>
+<button class="w-full sm:w-auto flex-shrink-0 flex items-center justify-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-secondary hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary dark:focus:ring-offset-card-dark">
+                                        Contact / Request Help
+                                    </button>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<div class="flex-grow">
+<h3 class="text-xl font-bold">Winter Coats (All sizes)</h3>
+<p class="text-subtle-light dark:text-subtle-dark mt-1">Quantity Available: 50 units</p>
+<p class="text-subtle-light dark:text-subtle-dark mt-1">Location: Downtown Relief Point</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">Low Stock</span>
 </div>
 </div>
-<div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
-<div class="relative w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 z-10">3</div>
-<div class="md:text-left">
-<h3 class="font-bold text-xl">Connect Volunteers</h3>
-<p class="mt-1 text-subtle-light dark:text-subtle-dark">We mobilize and coordinate volunteers.</p>
+<button class="w-full sm:w-auto flex-shrink-0 flex items-center justify-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-secondary hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary dark:focus:ring-offset-card-dark">
+                                        Contact / Request Help
+                                    </button>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<div class="flex-grow">
+<h3 class="text-xl font-bold">First Aid Kits</h3>
+<p class="text-subtle-light dark:text-subtle-dark mt-1">Quantity Available: 15 units</p>
+<p class="text-subtle-light dark:text-subtle-dark mt-1">Location: Northside Medical Clinic</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">In Shortage</span>
 </div>
 </div>
-<div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
-<div class="relative w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 z-10">4</div>
-<div class="md:text-left">
-<h3 class="font-bold text-xl">Relief &amp; Recovery</h3>
-<p class="mt-1 text-subtle-light dark:text-subtle-dark">Aid is delivered to the affected areas.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-20 sm:py-24 lg:py-28 bg-primary dark:bg-primary-dark text-white">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl sm:text-4xl font-bold">Our Impact</h2>
-<p class="mt-4 max-w-3xl mx-auto text-lg text-primary-light/80">The numbers speak for themselves. Together, we are making a difference.</p>
-<div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
-<div class="bg-white/10 p-8 rounded-2xl">
-<p class="text-5xl font-black">1.2M+</p>
-<p class="mt-2 text-lg font-medium text-primary-light">Meals Served</p>
-</div>
-<div class="bg-white/10 p-8 rounded-2xl">
-<p class="text-5xl font-black">15,000+</p>
-<p class="mt-2 text-lg font-medium text-primary-light">Volunteers Joined</p>
-</div>
-<div class="bg-white/10 p-8 rounded-2xl">
-<p class="text-5xl font-black">45+</p>
-<p class="mt-2 text-lg font-medium text-primary-light">Disaster Zones Covered</p>
+<button class="w-full sm:w-auto flex-shrink-0 flex items-center justify-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-secondary hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary dark:focus:ring-offset-card-dark">
+                                        Contact / Request Help
+                                    </button>
 </div>
 </div>
 </div>
-</section>
-<section class="py-20 sm:py-24 lg:py-28 bg-background-light dark:bg-background-dark">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Meet Our Team</h2>
-<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">The dedicated individuals leading our efforts and driving our mission forward.</p>
-<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-<div class="text-center">
-<img alt="Profile picture of Jane Doe" class="w-32 h-32 mx-auto rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvHf-auQIS15jKwlMnwTkLr6X4Oeyaw1kdFel1wkdL9x9OGBoGS7Lzvs7JrEAmxEqs9Lca0MEjNDBAR49Cs3iAH84lunQrHFD2PxA3BXPBmNL3S05dLvmnL9KXKKrGHnAuQfguqeYewDSFgcbF_Emm26_k9nJU3tbY256Sj7tsDOA-JcFBO0j1U3MHBNx7F3V03HGyjnuk3VY-w78TykUNrK_XFceOjGOZC_Poccp9bVRRfbTM5NTnpFIWiWh5LP6U7Rhu65qsQOY"/>
-<h3 class="mt-4 font-bold text-lg">Jane Doe</h3>
-<p class="text-primary dark:text-primary-light">Founder &amp; CEO</p>
+<div class="lg:col-span-1 space-y-8">
+<div class="bg-primary/5 dark:bg-primary/10 p-6 rounded-2xl">
+<h3 class="text-2xl font-bold text-primary dark:text-primary-light flex items-center gap-2"><span class="material-symbols-outlined">warning</span> Urgently Needed</h3>
+<ul class="mt-4 space-y-3 text-subtle-light dark:text-subtle-dark">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">radio_button_checked</span>Baby Formula</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">radio_button_checked</span>Blankets</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">radio_button_checked</span>Pain Relievers (e.g., Ibuprofen)</li>
+</ul>
 </div>
-<div class="text-center">
-<img alt="Profile picture of John Smith" class="w-32 h-32 mx-auto rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoEe7CQZNdcOJgrX2_dXNI8IGjHjiJNghRu0Ak3Vv05vcH9faid0aQfma65Wuoa-2Gs_BkPZVARSzF-geYfuZOL-yn5zhaerS-s7f9_sQ9YR0YEa_c7vmlKR05IwZKqyqQvccHjRIQVWONkcDTKesdhygSEzE4krgQzm57UkYCXs4iZIoXvtZ4xzYotgB9fn4uYiXLEqXx3uvNEy_fNc9PGtIjkCr9dj4jbff3Kd-qtT9eSkGHjTaqUXpcKeVm4Q6EWlFt3_GO7qc"/>
-<h3 class="mt-4 font-bold text-lg">John Smith</h3>
-<p class="text-primary dark:text-primary-light">Head of Operations</p>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm">
+<h3 class="text-2xl font-bold text-text-light dark:text-text-dark mb-4">Resource Map</h3>
+<div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
+<img alt="Map showing resource locations" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2e8A6b6c5D5a4f3b2d1c0A9e8F7G6h5i4k3j2b1a0C9gD8f7e6g5H4i3J2k1l0m9n8o7p6q5r4s3t2u1v0w_x_y"/>
 </div>
-<div class="text-center">
-<img alt="Profile picture of Emily Jones" class="w-32 h-32 mx-auto rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC55m4J--upQ55ZLqACu_qMdIsaT4vkAlq1zGcr7p4uCB9cvPpvHxEwquC2RzidKTuLU8Pxpu5dDUOTkbuVRFl86fP4MKv4Zrf_Fn3u2ckslUUxcC2c4b73IFLlF1KVUG1GdqLfveFhKIsSh2ENLCIoFW9WmtSrSZ_WEr68AyhcTEfxSDG493Pf31MO8PWdx-HURIhuOgzzwK605psMcHIT5HhUFVN9Fa7kE5Tzq2FKc10KvX8qCHvp1mUG37vDfJ4o6aRoskm3gYU"/>
-<h3 class="mt-4 font-bold text-lg">Emily Jones</h3>
-<p class="text-primary dark:text-primary-light">Volunteer Coordinator</p>
 </div>
-<div class="text-center">
-<img alt="Profile picture of Michael Brown" class="w-32 h-32 mx-auto rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEljF-6uynz9ybyd5TH-Zq6cG6PPenzRlh5j2TRgqdeGZ8EWHs4Qeiq5K5F9WMDRcBrfnhcyfYdp8wblNf_tJmSGnZdadUuBnSvj2JD-d-bLOqCM-klFLKpc_zycCfEbiG8eVRogrksjxX-JeFbC1Ay6WLB2ruw8UlfyxzQaJ_qUyzRjarGCgolpPGMKbdame_FgVMu53r5HagX0KIXZHBfFh-WKZDQ-LVBD36d1kMRaKqrxiotUE1K-DGKQUopSlKgOpayFu5Blk"/>
-<h3 class="mt-4 font-bold text-lg">Michael Brown</h3>
-<p class="text-primary dark:text-primary-light">Partnership Manager</p>
 </div>
 </div>
 </div>
 </section>
-<section class="py-20 sm:py-24 lg:py-28 bg-slate-50 dark:bg-card-dark/50">
+<section class="py-20 sm:py-24 bg-secondary">
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Partners &amp; Collaborations</h2>
-<p class="mt-4 max-w-2xl mx-auto text-lg text-subtle-light dark:text-subtle-dark">We are proud to work with these incredible organizations to maximize our impact.</p>
-<div class="mt-12 flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 gap-y-8">
-<img alt="Transistor" class="h-10 sm:h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCldd5mHeZ3I7hpv9vRnj1MT5jrXCxGjVwPUEjCy0r6cl1sMLBmL7OY5vH7lbkCMYvoq--wErb3bdZPezcOWu6sR41RPGpX5S_mhjgCnUI4HTHBaz9RQkWaon_TDDZT3_W-W-StmrIGF8Y0NyCxQV4MuSLCSKpFqPbc0GafxXaXvUPAmPYbcKyCkyhHqdYpqIsjKnFDGpDalJcp-AyPvG7nUKd_B9tgBvMbXkAri9McWaJNgKUjaLASlNvVE6fJMcz4LJpsg0_oDio"/>
-<img alt="Reform" class="h-10 sm:h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC42tREvJKzyngbxub8n_G8uf3sCh9cvmPeVy0QJpmqWYICEZCkMaF7PhL0Q7LugFEsqX0eizcb7YwmMCVLMh-HV5b_l8mXJ_zqosCw1a8fCe5xAwr3KbJX3NSsVD9PeGarV8s2tHu5T6He7igH_akgxRyZl9owX-XMqyQa3lraf5W2F-f9ToRkNowANmvR5cijASUfzKRQp1JzpjlXioSks5EQd9W3lKS3FUesJE9vcArqSZUCkQXIQWwW0XcmyErD-ijS_nGgdpw"/>
-<img alt="Tuple" class="h-10 sm:h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-YJ1b3qr51DHW7NGruV_2yREpTJs-gm_V4RAwER732klTa-wPA331zNNBaOKsmXyHI5VhWYOKLq-8wFx1UJkOlvX8W8_HKfgTaMCrUmA06CWes81S4AvpcIqepPsd7FcobbGrBZBUSegVbM_fZKoFEz_DDTlfX0wPeK7RlHdHQF09WaRRbZiRoo20Dk0fNjJaVfHq6HOlU6elW2aNzKgno9P5KcYwjAaa2Jb9ManWU1G1yJS0w5xC1tFDg7OdUvDYEUVR5itFG6Y"/>
-<img alt="SavvyCal" class="h-10 sm:h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU4U9ULVBkyBl8QZ_u7aaKsqQ1Tc4MgvyTYGTqcKP0WdoWew9iQ6FDb0vkzjqlGkyK8FoB3i3udQtDQ5mVWAp0Fz7VFqZ4PpxdLYgfOX-LCNRyQtK1_MVNxaIqQJ5Tp5O746z0-qx-AdC6t9gAczjXX_seePXHcjOysK9_3l8sXmld7-G4E694ji6JRJmXfOXOBJR-1OUh1SHAdDUfMr27_r8FQ3v1PCCzIkoZiRVDyg7wfVtkN02FTCPI-Yr73oI10ZVE7o1BFgA"/>
-<img alt="Statamic" class="h-10 sm:h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrtPVem-S6uL8GWM5dqtYH5G-oK7k6akbmGevfOL_8glprcOmN_l6_KHGMng09ODU3ZxQFh8rU5wE23TC6bj_LTIfO9qBTmwGKOOc0_XSYNXRiWCec4Ccql2wf7qScS7IiOsbgPmlPP6sshG4Y6l-efrY_Tzq91AA-HsbkpEwNA9v3lesKWVF5nlV9W1RvPs444Lzd8hbdRJwg4K7lWETbLlmWGeIi9xInqCwMCB3dnnYvq-9Es6Da3JB6HHjeuj6I7fI4QtWZSEM"/>
-</div>
+<h2 class="text-3xl sm:text-4xl font-bold text-white">Want to contribute?</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-secondary-light">Your help can make a world of difference. Donate resources to support those in need.</p>
+<a class="mt-8 inline-block bg-white text-secondary font-bold py-3 px-8 rounded-full text-lg hover:bg-red-50 transition-colors" href="#">
+                        Donate your resources here
+                    </a>
 </div>
 </section>
 </main>
@@ -253,6 +242,11 @@
 <h2 class="text-xl font-bold text-white">ReliefHub</h2>
 </div>
 <p class="mt-4 text-sm text-subtle-dark">Together for Relief, Together for Hope.</p>
+<div class="mt-4">
+<h3 class="font-bold text-white">Helpline Numbers:</h3>
+<p class="text-sm text-subtle-dark">Emergency: 911</p>
+<p class="text-sm text-subtle-dark">Our Support: 1-800-RELIEF-H</p>
+</div>
 </div>
 <div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
 <div>
@@ -283,11 +277,6 @@
 <a class="text-subtle-dark hover:text-white transition-colors" href="#">
 <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-</svg>
-</a>
-<a class="text-subtle-dark hover:text-white transition-colors" href="#">
-<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.001c0 4.237 2.636 7.855 6.356 9.312-.087-.79-.02-1.734.2-2.522.228-.79.79-1.928.79-1.928s-.2-.401-.2-1.002c0-.942.55-1.64 1.24-1.64.58 0 .86.436.86.952 0 .58-.37 1.448-.56 2.248-.15.656.32 1.191.96 1.191 1.15 0 2.01-1.223 2.01-2.992 0-2.456-1.74-4.328-4.88-4.328-3.32 0-5.49 2.473-5.49 5.253 0 .991.37 2.062.83 2.652.09.12.1.215.07.33-.03.11-.1.44-.13.56-.03.12-.17.17-.3.09C5.12 16.48 4.07 14.51 4.07 12.502c0-3.414 2.74-6.223 6.64-6.223 3.51 0 5.86 2.592 5.86 5.518 0 3.53-2.22 6.33-5.26 6.33-1.05 0-2.03-.54-2.36-1.15l-.77 2.92c-.25.92-.94 2.23-1.4 2.82A10.012 10.012 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill-rule="evenodd"></path>
 </svg>
 </a>
 </div>
