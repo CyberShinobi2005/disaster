@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothes Resources</title>
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <style>
+    .dropdown-transition {
+      transition: all 0.3s ease-in-out;
+    }
+    .card-hover:hover {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+
+  <!-- Top Navbar -->
+  <div class="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow-md">
+    <div>
+      <img src="/image/Gemini_Generated_Image_msw8f4msw8f4msw8-removebg-preview.png" alt="Website Logo" class="h-10 w-auto">
+    </div>
+    <div class="flex gap-4">
+<a href="/form/request.html" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 inline-block text-center">
+    Request Clothes
+</a>
+
+<a href="/form/offer.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 inline-block text-center">
+    Donate Clothes
+</a>
+    </div>
+  </div>
+
+  <!-- Page Heading and Description -->
+  <div class="text-center mt-12 px-6">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Clothes Resources</h1>
+    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      Explore the available clothes resources shared by the community in your area. Find essential items such as shirts, pants, jackets, and blankets provided by volunteers and local organizations. Select your location to view the nearest available resources.
+    </p>
+  </div>
+
+  <!-- Filter by Location Dropdown -->
+  <div class="flex justify-center mt-8 mb-12">
+    <div class="relative">
+      <button onclick="toggleDropdown('locationDropdown')" class="flex items-center gap-2 bg-primary/10 dark:bg-primary/20 text-primary font-medium px-4 py-2 rounded-lg">
+        Select Location
+        <span class="material-symbols-outlined">expand_more</span>
+      </button>
+      <div id="locationDropdown" class="absolute hidden mt-2 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-lg z-50 dropdown-transition">
+        <ul class="py-2">
+          <li class="px-4 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer" onclick="filterClothesResources('City A')">City A</li>
+          <li class="px-4 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer" onclick="filterClothesResources('City B')">City B</li>
+          <li class="px-4 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer" onclick="filterClothesResources('City C')">City C</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clothes Resource Cards -->
+  <div id="clothesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 mb-12">
+    <!-- Example Clothes Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover transition-shadow duration-300" data-location="City A">
+      <img src="https://via.placeholder.com/400x200" alt="Shirt" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="font-bold text-lg text-gray-900 dark:text-white">Shirts</h3>
+        <p class="text-gray-600 dark:text-gray-300 mt-2">Available in City A. Shared by local volunteers.</p>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover transition-shadow duration-300" data-location="City B">
+      <img src="https://via.placeholder.com/400x200" alt="Pants" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="font-bold text-lg text-gray-900 dark:text-white">Pants</h3>
+        <p class="text-gray-600 dark:text-gray-300 mt-2">Available in City B. Shared by local organizations.</p>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover transition-shadow duration-300" data-location="City C">
+      <img src="https://via.placeholder.com/400x200" alt="Jackets" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="font-bold text-lg text-gray-900 dark:text-white">Jackets</h3>
+        <p class="text-gray-600 dark:text-gray-300 mt-2">Available in City C. Shared by local volunteers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      dropdown.classList.toggle('hidden');
+    }
+
+    function filterClothesResources(city) {
+      const cards = document.querySelectorAll('#clothesGrid [data-location]');
+      cards.forEach(card => {
+        card.style.display = card.dataset.location === city ? 'block' : 'none';
+      });
+    }
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+      const dropdown = document.getElementById('locationDropdown');
+      const btn = document.querySelector('button[onclick^="toggleDropdown"]');
+      if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

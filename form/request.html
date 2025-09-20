@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Resource</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+
+<div class="max-w-3xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg mt-12 relative">
+  <!-- Logo on top-right -->
+  <img src="/image/Gemini_Generated_Image_msw8f4msw8f4msw8-removebg-preview.png" alt="Logo" class="absolute top-4 right-4 w-16 h-16 object-contain">
+
+  <h1 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-4">Request a Resource</h1>
+  <p class="text-gray-600 dark:text-gray-300 text-center mb-8">
+    Fill out the form below to request a resource from the community.
+  </p>
+
+  <form id="requestForm" class="space-y-6">
+    <!-- Name -->
+    <div>
+      <label for="name" class="block text-gray-700 dark:text-gray-200 font-medium mb-1">Full Name</label>
+      <input type="text" id="name" name="name" required
+        class="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none">
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <label for="contact" class="block text-gray-700 dark:text-gray-200 font-medium mb-1">Contact Number / Email</label>
+      <input type="text" id="contact" name="contact" required
+        class="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none">
+    </div>
+
+    <!-- Location -->
+    <div>
+      <label for="location" class="block text-gray-700 dark:text-gray-200 font-medium mb-1">Location</label>
+      <select id="location" name="location" required
+        class="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none">
+        <option value="" disabled selected>Select your city</option>
+        <option value="City A">City A</option>
+        <option value="City B">City B</option>
+        <option value="City C">City C</option>
+      </select>
+    </div>
+
+    <!-- Resource Type -->
+    <div>
+      <label for="resource" class="block text-gray-700 dark:text-gray-200 font-medium mb-1">Resource Type</label>
+      <select id="resource" name="resource" required
+        class="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none">
+        <option value="" disabled selected>Select resource</option>
+        <option value="Food">Food</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Medicines">Medicines</option>
+        <option value="Shelter">Shelter</option>
+      </select>
+    </div>
+
+    <!-- Additional Notes -->
+    <div>
+      <label for="notes" class="block text-gray-700 dark:text-gray-200 font-medium mb-1">Additional Notes</label>
+      <textarea id="notes" name="notes" rows="4"
+        class="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none"
+        placeholder="Any specific requirements..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2 rounded-lg">
+        Submit Request
+      </button>
+    </div>
+  </form>
+</div>
+
+
+  <script>
+    document.getElementById('requestForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const location = document.getElementById('location').value;
+      const resource = document.getElementById('resource').value;
+      const notes = document.getElementById('notes').value;
+
+      // For demonstration, we just show the details in an alert
+      alert(`Request Submitted!\n\nName: ${name}\nContact: ${contact}\nLocation: ${location}\nResource: ${resource}\nNotes: ${notes}`);
+
+      // You can send this data to backend/server here using fetch/ajax
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
