@@ -1,170 +1,136 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ReliefConnect - Emergency Helpline</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#E53E3E",
-                        "background-light": "#FFFFFF",
-                        "background-dark": "#1A202C",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "0.75rem",
-                        "xl": "1rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disaster Management - Emergency Helpline</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .animate-marquee {
-            animation: marquee 20s linear infinite;
-        }
-        @keyframes marquee {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-    </style>
+  /* Pulse animation for SOS button */
+  @keyframes pulseGlow {
+    0%,100% { box-shadow: 0 0 0 0 rgba(255,0,0,0.7); }
+    50% { box-shadow: 0 0 20px 10px rgba(255,0,0,0.7); }
+  }
+  .pulse { animation: pulseGlow 1.5s infinite; }
+</style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
-<div class="flex flex-col min-h-screen">
-<header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center gap-4">
-<div class="text-red-600">
-<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm3.5 13.5L12 12.5l-3.5 3-1.5-1.5 3.5-3-3.5-3 1.5-1.5 3.5 3 3.5-3 1.5 1.5-3.5 3 3.5 3-1.5 1.5z"></path>
-</svg>
-</div>
-<h1 class="text-xl font-bold text-slate-900 dark:text-white">ReliefConnect</h1>
-<a class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="index.html">
-  <span class="material-symbols-outlined">arrow_back</span>
-  <span>Home</span>
-</a>
-</div>
-</div>
-<div class="bg-red-600 text-white py-2 overflow-hidden">
-<div class="whitespace-nowrap animate-marquee">
-<span class="font-bold mx-8">Flood Alert in Bihar – Helpline 1800-xxxxxx</span>
-<span class="font-bold mx-8">Cyclone Warning in Odisha – Helpline 1070</span>
-<span class="font-bold mx-8">Earthquake Advisory in Himachal – Helpline 1077</span>
-</div>
-</div>
-</header>
-<main class="flex-grow pt-28 pb-20 bg-white">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col items-center text-center space-y-12">
-<section class="w-full max-w-md">
-<button class="w-64 h-64 bg-red-600 hover:bg-red-700 text-white rounded-full flex flex-col items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-105">
-<span class="text-6xl font-black">SOS</span>
-<span class="text-xl font-bold mt-2">Call for Immediate Help</span>
-</button>
-<p class="mt-4 text-slate-600 dark:text-slate-400">Click to instantly connect with helpline</p>
-<div class="mt-6 flex justify-center gap-4">
-<button class="flex items-center justify-center gap-2 rounded-full h-12 px-6 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
-<span>Call</span><span>📞</span>
-</button>
-<button class="flex items-center justify-center gap-2 rounded-full h-12 px-6 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
-<span>Message</span><span>💬</span>
-</button>
-<button class="flex items-center justify-center gap-2 rounded-full h-12 px-6 bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
-<span>Share Location</span><span>📍</span>
-</button>
-</div>
-</section>
-<section class="w-full">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Quick Contact Numbers</h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<a class="flex flex-col items-center justify-center p-4 bg-red-100/50 dark:bg-red-900/20 rounded-xl h-32 text-center hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors" href="tel:">
-<span class="text-4xl mb-2">🚑</span>
-<span class="font-bold text-slate-800 dark:text-slate-200">Ambulance</span>
-</a>
-<a class="flex flex-col items-center justify-center p-4 bg-red-100/50 dark:bg-red-900/20 rounded-xl h-32 text-center hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors" href="tel:">
-<span class="text-4xl mb-2">🔥</span>
-<span class="font-bold text-slate-800 dark:text-slate-200">Fire</span>
-</a>
-<a class="flex flex-col items-center justify-center p-4 bg-red-100/50 dark:bg-red-900/20 rounded-xl h-32 text-center hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors" href="tel:">
-<span class="text-4xl mb-2">👮</span>
-<span class="font-bold text-slate-800 dark:text-slate-200">Police</span>
-</a>
-<a class="flex flex-col items-center justify-center p-4 bg-red-100/50 dark:bg-red-900/20 rounded-xl h-32 text-center hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors" href="tel:">
-<span class="text-4xl mb-2">☎️</span>
-<span class="font-bold text-slate-800 dark:text-slate-200">Disaster Helpline</span>
-</a>
-</div>
-</section>
-<section class="w-full max-w-lg bg-slate-50 dark:bg-slate-800 p-8 rounded-xl shadow-md">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center">Live Chat / Request Form</h2>
-<form class="space-y-4">
-<div>
-<label class="sr-only" for="name">Name</label>
-<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" id="name" name="name" placeholder="Your Name" type="text"/>
-</div>
-<div>
-<label class="sr-only" for="location">Location</label>
-<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" id="location" name="location" placeholder="Your Location" type="text"/>
-</div>
-<div>
-<label class="sr-only" for="help-type">Type of Help Needed</label>
-<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-primary focus:border-primary" id="help-type" name="help-type" placeholder="Type of Help Needed (e.g., Medical, Food)" type="text"/>
-</div>
-<button class="w-full rounded-lg h-12 px-6 bg-red-600 hover:bg-red-700 text-white text-base font-bold shadow-lg transition-all" type="submit">Submit Request</button>
-</form>
-</section>
-<section class="w-full max-w-lg">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Location Sharing</h2>
-<div class="bg-slate-200 dark:bg-slate-700 h-64 rounded-xl flex flex-col items-center justify-center">
-<div class="text-center text-slate-500 dark:text-slate-400 p-4">
-<p class="font-bold">Map Area</p>
-<p class="text-sm">A map would be displayed here.</p>
-</div>
-</div>
-<button class="mt-6 w-full rounded-lg h-12 px-6 bg-primary/20 hover:bg-primary/30 text-primary text-base font-bold transition-all">
-                            Share My Location with Relief Teams
-                        </button>
-</section>
-</div>
-</div>
-</main>
-<footer class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 z-50">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
-<div class="flex justify-center items-center space-x-4 sm:space-x-8 text-sm font-medium">
-<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
-<span>|</span>
-<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Resources</a>
-<span>|</span>
-<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Donate</a>
-<span>|</span>
-<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Volunteer</a>
-</div>
-<p class="mt-2 text-center text-xs text-slate-500 dark:text-slate-400">
-<strong>Emergency Note:</strong> This service connects you to verified disaster relief partners.
-                </p>
-</div>
-</footer>
-</div>
+<body class="flex flex-col min-h-screen bg-gradient-to-b from-red-600 via-red-500 to-orange-400 text-white font-bold">
 
-</body></html>
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-4">
+          <div class="text-primary">
+            <img src="/image/Gemini_Generated_Image_msw8f4msw8f4msw8-removebg-preview.png" alt="Icon" class="h-8 w-8">
+          </div>
+          <h1 class="text-xl font-bold text-slate-900 dark:text-white">ReliefConnect</h1>
+        </div>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+          <a href="aboutus.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">About Us</a>
+          <a href="resource.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Resources</a>
+          <a href="do.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Donate</a>
+          <a href="vou.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Volunteer</a>
+          <a href="contact.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+          <a href="update.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Update</a>
+          <a href="map.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Map</a>
+          <a href="report.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Report</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex flex-col items-center justify-center p-4">
+
+    <!-- NGO Selection Dropdown -->
+    <div class="mb-6 w-full max-w-md mt-10">
+      <label for="ngoSelect" class="text-lg md:text-xl mb-2 block">Select NGO for Help:</label>
+      <select id="ngoSelect" class="w-full text-black p-3 rounded-lg font-semibold">
+        <option value="919560638898">Red Cross</option>
+        <option value="911234567890">Disaster Relief NGO</option>
+        <option value="911112223334">Local Help Center</option>
+      </select>
+    </div>
+
+    <!-- SOS Button -->
+    <button id="sosBtn" class="flex items-center justify-center w-36 h-36 md:w-48 md:h-48 bg-red-700 rounded-full text-3xl md:text-5xl text-white shadow-lg hover:scale-105 transition-transform pulse">
+      SOS
+    </button>
+
+    <!-- Optional Message -->
+    <p class="mt-6 text-center text-lg md:text-xl max-w-md">
+      Press SOS in case of immediate danger. Help is just one click away!
+    </p>
+
+    <!-- Quick Info Section -->
+    <section class="mt-10 w-full max-w-md text-center space-y-4">
+      <div class="bg-white bg-opacity-20 rounded-lg py-3 px-5 hover:bg-opacity-30 transition">Police: <a href="tel:100" class="underline">100</a></div>
+      <div class="bg-white bg-opacity-20 rounded-lg py-3 px-5 hover:bg-opacity-30 transition">Fire Brigade: <a href="tel:101" class="underline">101</a></div>
+      <div class="bg-white bg-opacity-20 rounded-lg py-3 px-5 hover:bg-opacity-30 transition">Medical Emergency: <a href="tel:102" class="underline">102</a></div>
+      <div class="bg-white bg-opacity-20 rounded-lg py-3 px-5 hover:bg-opacity-30 transition">Disaster Relief Contact: <a href="tel:+911" class="underline">+91-XXXXXXXXXX</a></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-card-dark text-text-dark">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="/image/Gemini_Generated_Image_msw8f4msw8f4msw8-removebg-preview.png" alt="Volunteer Activism" class="w-12 h-12">
+            <h2 class="text-xl font-bold text-white">ReliefHub</h2>
+          </div>
+          <p class="mt-4 text-sm text-subtle-dark">Together for Relief, Together for Hope.</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
+          <div>
+            <h3 class="font-bold text-white">Quick Links</h3>
+            <ul class="mt-4 space-y-2">
+              <li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Home</a></li>
+              <li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">About Us</a></li>
+              <li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Donate</a></li>
+              <li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-white">Get Involved</h3>
+            <ul class="mt-4 space-y-2">
+              <li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Volunteer</a></li>
+              <li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Partner with Us</a></li>
+              <li><a class="text-sm text-subtle-dark hover:text-white transition-colors" href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-white">Follow Us</h3>
+            <div class="mt-4 flex space-x-4">
+              <a class="text-subtle-dark hover:text-white transition-colors" href="#">
+                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+                </svg>
+              </a>
+              <!-- Add other social icons as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-slate-800 pt-8 text-center text-sm text-subtle-dark">
+        <p>© 2024 ReliefHub. All Rights Reserved. A commitment to community and resilience.</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+const sosBtn = document.getElementById('sosBtn');
+const ngoSelect = document.getElementById('ngoSelect');
+
+sosBtn.addEventListener('click', () => {
+  const selectedNGO = ngoSelect.options[ngoSelect.selectedIndex].text;
+  alert(`Message sent to ${selectedNGO} for emergency!`);
+});
+</script>
+
+</body>
+</html>

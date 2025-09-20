@@ -33,54 +33,46 @@
   };
 </script>
 
-<!-- Mapbox CSS -->
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.16.1/mapbox-gl.css" rel="stylesheet">
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-<!-- Custom Style -->
 <style>
-  body {
-    font-family: "Newsreader", serif;
-  }
+  body { font-family: "Newsreader", serif; }
+  #map { width: 100%; height: 100%; }
 </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-display">
 
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center gap-4">
-<div class="text-primary">
-<!-- Replace with image -->
-<img src="/image/Gemini_Generated_Image_msw8f4msw8f4msw8-removebg-preview.png" alt="Icon" class="h-8 w-8">
-</div>
-<h1 class="text-xl font-bold text-slate-900 dark:text-white">ReliefConnect</h1>
-</div>
-<nav class="hidden md:flex items-center space-x-8">
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Home</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="aboutus.html">About Us</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="resource.html">Resources</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="do.html">Donate</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="vou.html">Volunteer</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="contact.html">Contact</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="update.html">Update</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="map.html">Map</a>
-<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="report.html">Report</a>
-
-</nav>
-<div class="flex items-center gap-2">
-<a href="em.html" 
-   class="hidden sm:flex items-center justify-center rounded-lg h-10 px-4 bg-red-600 hover:bg-red-700 text-white text-sm font-bold transition-colors">
-   Emergency Helpline
-</a>
-<button class="md:hidden flex items-center justify-center rounded-lg h-10 w-10 bg-primary/20 dark:bg-primary/30 text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-4">
+        <div class="text-primary">
+          <img src="/image/Gemini_Generated_Image_msw8f4msw8f4msw8-removebg-preview.png" alt="Icon" class="h-8 w-8">
+        </div>
+        <h1 class="text-xl font-bold text-slate-900 dark:text-white">ReliefConnect</h1>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+        <a href="aboutus.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">About Us</a>
+        <a href="resource.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Resources</a>
+        <a href="do.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Donate</a>
+        <a href="vou.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Volunteer</a>
+        <a href="contact.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+        <a href="update.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Update</a>
+        <a href="map.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Map</a>
+        <a href="report.html" class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Report</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="em.html" class="hidden sm:flex items-center justify-center rounded-lg h-10 px-4 bg-red-600 hover:bg-red-700 text-white text-sm font-bold transition-colors">Emergency Helpline</a>
+        <button class="md:hidden flex items-center justify-center rounded-lg h-10 w-10 bg-primary/20 dark:bg-primary/30 text-primary">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
-
 
 <!-- Main -->
 <main class="pt-20">
@@ -89,15 +81,23 @@
     <p class="text-lg text-gray-600 dark:text-gray-400">Locate shelters, medical aid, food, and volunteers near you.</p>
   </section>
 
-  <!-- Search Filters -->
+  <!-- Filters -->
   <section class="container mx-auto px-4 py-4 sticky top-[68px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
     <div class="bg-white dark:bg-gray-900/50 p-4 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-4">
+      
+      <!-- City Dropdown -->
       <div class="relative flex-grow w-full">
-        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
-        <input class="w-full pl-10 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full focus:ring-2 focus:ring-primary focus:border-primary transition-all text-gray-900 dark:text-gray-100 placeholder-gray-500" placeholder="Enter City / PIN Code / Area" type="search"/>
+        <select id="citySelect" class="w-full pl-4 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full focus:ring-2 focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-100">
+          <option>Select City</option>
+          <option>Delhi</option>
+          <option>Bihar</option>
+          <option>UP</option>
+          <option>Haryana</option>
+        </select>
       </div>
+
       <div class="flex flex-wrap gap-2 justify-center w-full md:w-auto">
-        <select class="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-gray-800 dark:text-gray-200 focus:ring-primary focus:border-primary">
+        <select id="typeFilter" class="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-gray-800 dark:text-gray-200 focus:ring-primary focus:border-primary">
           <option>Resource Type</option>
           <option>Shelter</option>
           <option>Food</option>
@@ -105,17 +105,11 @@
           <option>Volunteer</option>
           <option>Donations</option>
         </select>
-        <select class="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-gray-800 dark:text-gray-200 focus:ring-primary focus:border-primary">
+        <select id="availFilter" class="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-gray-800 dark:text-gray-200 focus:ring-primary focus:border-primary">
           <option>Availability</option>
           <option>Immediate</option>
           <option>Limited</option>
           <option>Ongoing</option>
-        </select>
-        <select class="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-gray-800 dark:text-gray-200 focus:ring-primary focus:border-primary">
-          <option>Distance / Radius</option>
-          <option>&lt; 5 km</option>
-          <option>&lt; 10 km</option>
-          <option>&lt; 25 km</option>
         </select>
       </div>
     </div>
@@ -124,119 +118,114 @@
   <!-- Map + Sidebar -->
   <div class="container mx-auto px-4 py-8">
     <div class="flex flex-col lg:flex-row gap-8">
-
       <!-- Sidebar -->
       <aside class="lg:w-1/3 xl:w-1/4 h-[calc(100vh-250px)] overflow-y-auto pr-2">
         <h3 class="text-xl font-bold mb-4">Resources Near You</h3>
-        <div class="space-y-4">
-          <div class="bg-white dark:bg-gray-900/50 p-4 rounded-lg shadow-md border-l-4 border-safe">
-            <h4 class="font-bold text-lg text-gray-900 dark:text-white">Community Shelter</h4>
-            <p class="text-sm text-gray-500 dark:text-gray-400">Shelter</p>
-            <p class="text-sm text-safe font-semibold mt-1">Availability: Immediate</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Contact: 123-456-7890</p>
-          </div>
-          <div class="bg-white dark:bg-gray-900/50 p-4 rounded-lg shadow-md border-l-4 border-yellow-500">
-            <h4 class="font-bold text-lg text-gray-900 dark:text-white">Central Medical Camp</h4>
-            <p class="text-sm text-gray-500 dark:text-gray-400">Medical</p>
-            <p class="text-sm text-yellow-500 font-semibold mt-1">Availability: Limited</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Contact: 987-654-3210</p>
-          </div>
-          <div class="bg-white dark:bg-gray-900/50 p-4 rounded-lg shadow-md border-l-4 border-primary">
-            <h4 class="font-bold text-lg text-gray-900 dark:text-white">Relief Food Distribution</h4>
-            <p class="text-sm text-gray-500 dark:text-gray-400">Food</p>
-            <p class="text-sm text-primary font-semibold mt-1">Availability: Ongoing</p>
-            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Contact: 555-555-5555</p>
-          </div>
-        </div>
+        <div id="sidebarResources" class="space-y-4"></div>
       </aside>
 
       <!-- Map Section -->
       <section class="flex-grow h-[calc(100vh-250px)] rounded-lg overflow-hidden shadow-lg relative bg-gray-200 dark:bg-gray-800">
-        <div id="map" class="w-full h-full"></div>
+        <div id="map"></div>
       </section>
-
     </div>
   </div>
 </main>
 
-<!-- Footer -->
-<footer class="bg-blue-950 text-black">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="md:col-span-1">
-        <div class="flex items-center gap-3">
-<img src="/image/Gemini_Generated_Image_msw8f4msw8f4msw8-removebg-preview.png" alt="Volunteer Activism" class="w-12 h-12">
-          <h2 class="text-xl font-bold text-black">ReliefHub</h2>
-        </div>
-        <p class="mt-4 text-sm text-black">Together for Relief, Together for Hope.</p>
-        <div class="mt-6 flex space-x-4">
-          <!-- Social Icons here -->
-        </div>
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
-        <div>
-          <h3 class="font-bold text-black">Quick Links</h3>
-          <ul class="mt-4 space-y-2">
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="/Home/index.htm">Home</a></li>
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="/Home/aboutus.html">About Us</a></li>
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="/Home/do.html">Donate</a></li>
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="/Home/contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-black">Get Involved</h3>
-          <ul class="mt-4 space-y-2">
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="#">Volunteer</a></li>
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="#">Partner with Us</a></li>
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-black">Resources</h3>
-          <ul class="mt-4 space-y-2">
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="#">Request Help</a></li>
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="#">Safety Guides</a></li>
-            <li><a class="text-sm text-black hover:text-white transition-colors" href="#">News &amp; Updates</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="mt-8 border-t border-slate-800 pt-8 text-center text-sm text-black">
-      <p>© 2024 ReliefHub. All Rights Reserved. A commitment to community and resilience.</p>
-    </div>
-  </div>
-</footer>
-
-
-
-<!-- Mapbox JS -->
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.16.1/mapbox-gl.js"></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-  // ✅ Mapbox API key
-  mapboxgl.accessToken = 'pk.1831c6b95b1c0a41b3ecf9e4899bedec';
+const map = L.map('map').setView([28.6139, 77.2090], 6);
 
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [77.2090, 28.6139], // Default: Delhi
-    zoom: 10
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap'
+}).addTo(map);
+
+// Predefined cities with resources
+const cityResources = {
+  "Delhi": [
+    { name: "Community Shelter Delhi", type: "Shelter", availability: "Immediate", coords: [28.6139, 77.2090], contact: "123-456-7890" },
+    { name: "Central Medical Camp Delhi", type: "Medical", availability: "Limited", coords: [28.6200, 77.2300], contact: "987-654-3210" }
+  ],
+  "Bihar": [
+    { name: "Patna Food Camp", type: "Food", availability: "Ongoing", coords: [25.5941, 85.1376], contact: "111-222-3333" },
+    { name: "Shelter Bihar", type: "Shelter", availability: "Immediate", coords: [25.6130, 85.1400], contact: "444-555-6666" }
+  ],
+  "UP": [
+    { name: "Lucknow Medical Camp", type: "Medical", availability: "Limited", coords: [26.8467, 80.9462], contact: "777-888-9999" },
+    { name: "Food Distribution UP", type: "Food", availability: "Ongoing", coords: [26.8500, 80.9500], contact: "000-111-2222" }
+  ],
+  "Haryana": [
+    { name: "Gurgaon Shelter", type: "Shelter", availability: "Immediate", coords: [28.4595, 77.0266], contact: "333-444-5555" },
+    { name: "Medical Camp Haryana", type: "Medical", availability: "Limited", coords: [28.4600, 77.0300], contact: "666-777-8888" }
+  ]
+};
+
+let markers = [];
+let currentCity = "Delhi";
+
+function getColor(type){
+  if(type==="Shelter") return "green";
+  if(type==="Medical") return "orange";
+  if(type==="Food") return "blue";
+  return "gray";
+}
+
+function renderMarkers(city, filter={}){
+  markers.forEach(m=>map.removeLayer(m));
+  markers = [];
+
+  const resources = cityResources[city] || [];
+  const filtered = resources.filter(r=>{
+    let typeMatch = !filter.type || r.type === filter.type;
+    let availMatch = !filter.availability || r.availability === filter.availability;
+    return typeMatch && availMatch;
   });
 
-  // Markers
-  new mapboxgl.Marker({ color: "green" })
-    .setLngLat([77.2090, 28.6139])
-    .setPopup(new mapboxgl.Popup().setHTML("<h4>Community Shelter</h4><p>Contact: 123-456-7890</p><p>Status: Immediate</p>"))
-    .addTo(map);
+  const sidebar = document.getElementById("sidebarResources");
+  sidebar.innerHTML = '';
 
-  new mapboxgl.Marker({ color: "yellow" })
-    .setLngLat([77.2300, 28.6200])
-    .setPopup(new mapboxgl.Popup().setHTML("<h4>Central Medical Camp</h4><p>Contact: 987-654-3210</p><p>Status: Limited</p>"))
-    .addTo(map);
+  filtered.forEach(r=>{
+    const marker = L.circleMarker(r.coords, { color: getColor(r.type), radius: 8 }).addTo(map)
+      .bindPopup(`<b>${r.name}</b><br>Type: ${r.type}<br>Availability: ${r.availability}<br>Contact: ${r.contact}`);
+    markers.push(marker);
 
-  new mapboxgl.Marker({ color: "blue" })
-    .setLngLat([77.2500, 28.6400])
-    .setPopup(new mapboxgl.Popup().setHTML("<h4>Relief Food Distribution</h4><p>Contact: 555-555-5555</p><p>Status: Ongoing</p>"))
-    .addTo(map);
+    const card = document.createElement("div");
+    card.className = `bg-white dark:bg-gray-900/50 p-4 rounded-lg shadow-md`;
+    card.innerHTML = `<h4 class="font-bold text-lg text-gray-900 dark:text-white">${r.name}</h4>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">${r.type}</p>
+                      <p class="text-sm font-semibold mt-1">${r.availability}</p>
+                      <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Contact: ${r.contact}</p>`;
+    sidebar.appendChild(card);
+  });
+
+  if(filtered.length>0) map.setView(filtered[0].coords, 10);
+}
+
+// Initial render
+renderMarkers(currentCity);
+
+// Filters
+document.getElementById("typeFilter").addEventListener("change", ()=>renderMarkers(currentCity,{
+  type: document.getElementById("typeFilter").value!=="Resource Type"?document.getElementById("typeFilter").value:null,
+  availability: document.getElementById("availFilter").value!=="Availability"?document.getElementById("availFilter").value:null
+}));
+
+document.getElementById("availFilter").addEventListener("change", ()=>renderMarkers(currentCity,{
+  type: document.getElementById("typeFilter").value!=="Resource Type"?document.getElementById("typeFilter").value:null,
+  availability: document.getElementById("availFilter").value!=="Availability"?document.getElementById("availFilter").value:null
+}));
+
+// City dropdown
+document.getElementById("citySelect").addEventListener("change", e=>{
+  const city = e.target.value;
+  if(cityResources[city]){
+    currentCity = city;
+    renderMarkers(city);
+  }
+});
 </script>
 
 </body>
