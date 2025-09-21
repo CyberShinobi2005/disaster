@@ -112,43 +112,85 @@
 <div class="grid lg:grid-cols-3 gap-12">
 <div class="lg:col-span-2">
 <h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark">Send us a Message</h2>
-<form class="mt-8 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Name</label>
-<div class="mt-1">
-<input autocomplete="name" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="full-name" name="full-name" type="text"/>
-</div>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Email</label>
-<div class="mt-1">
-<input autocomplete="email" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="email" name="email" type="email"/>
-</div>
-</div>
-<div class="sm:col-span-2">
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-number">Phone Number</label>
-<div class="mt-1">
-<input autocomplete="tel" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="phone-number" name="phone-number" type="text"/>
-</div>
-</div>
-<div class="sm:col-span-2">
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="subject">Subject</label>
-<div class="mt-1">
-<input class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="subject" name="subject" type="text"/>
-</div>
-</div>
-<div class="sm:col-span-2">
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="message">Message</label>
-<div class="mt-1">
-<textarea class="block w-full rounded-xl border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="message" name="message" rows="4"></textarea>
-</div>
-</div>
-<div class="sm:col-span-2">
-<button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">
-                                        Send Message
-                                    </button>
-</div>
+<form id="contactForm" class="mt-8 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Name</label>
+    <div class="mt-1">
+      <input autocomplete="name" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="full-name" name="full-name" type="text"/>
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Email</label>
+    <div class="mt-1">
+      <input autocomplete="email" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="email" name="email" type="email"/>
+    </div>
+  </div>
+
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-number">Phone Number</label>
+    <div class="mt-1">
+      <input autocomplete="tel" class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="phone-number" name="phone-number" type="text"/>
+    </div>
+  </div>
+
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="subject">Subject</label>
+    <div class="mt-1">
+      <input class="block w-full rounded-full border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="subject" name="subject" type="text"/>
+    </div>
+  </div>
+
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="message">Message</label>
+    <div class="mt-1">
+      <textarea class="block w-full rounded-xl border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm px-4 py-3" id="message" name="message" rows="4"></textarea>
+    </div>
+  </div>
+
+  <div class="sm:col-span-2">
+    <button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">
+      Send Message
+    </button>
+    <!-- Message div button ke niche -->
+    <div id="contactMessage" class="mt-4 font-medium text-center"></div>
+  </div>
 </form>
+
+<script>
+  const contactForm = document.getElementById('contactForm');
+  const contactMessageDiv = document.getElementById('contactMessage');
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById('full-name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone-number').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!fullName || !email || !phone || !subject || !message) {
+      contactMessageDiv.textContent = 'Please fill in all required fields!';
+      contactMessageDiv.style.color = 'red';
+    } else {
+      const contactData = { fullName, email, phone, subject, message };
+      console.log('Contact Form Data:', contactData);
+
+      contactMessageDiv.textContent = 'Your message has been sent successfully!';
+      contactMessageDiv.style.color = 'green';
+
+      // Reset form
+      contactForm.reset();
+    }
+
+    // Message 3 second ke liye show ho aur phir disappear
+    setTimeout(() => {
+      contactMessageDiv.textContent = '';
+    }, 3000);
+  });
+</script>
+
 </div>
 <div class="space-y-8">
 <div>

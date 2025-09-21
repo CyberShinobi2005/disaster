@@ -155,6 +155,60 @@
     </div>
   </div>
 </form>
+
+<script>
+  const reportForm = document.getElementById('report-form');
+  const successMsg = document.getElementById('success-msg');
+
+  reportForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Input values
+    const fullName = document.getElementById('full-name').value.trim();
+    const contact = document.getElementById('contact').value.trim();
+    const location = document.getElementById('location').value.trim();
+    const disasterType = document.getElementById('disaster-type').value;
+    const priority = document.getElementById('priority').value;
+    const description = document.getElementById('description').value.trim();
+    const files = document.getElementById('file-upload').files;
+
+    // Basic validation
+    if (!fullName || !contact || !location || !disasterType || !priority || !description) {
+      successMsg.textContent = 'Please fill in all required fields!';
+      successMsg.style.color = 'red';
+      successMsg.classList.remove('hidden');
+      setTimeout(() => { successMsg.classList.add('hidden'); }, 3000);
+      return;
+    }
+
+    // Prepare data object (you can send this to API)
+    const reportData = {
+      fullName,
+      contact,
+      location,
+      disasterType,
+      priority,
+      description,
+      files
+    };
+
+    console.log('Disaster Report Data:', reportData);
+
+    // Show success message
+    successMsg.textContent = 'Report submitted successfully!';
+    successMsg.style.color = 'green';
+    successMsg.classList.remove('hidden');
+
+    // Reset form
+    reportForm.reset();
+
+    // Hide message after 3 seconds
+    setTimeout(() => {
+      successMsg.classList.add('hidden');
+    }, 3000);
+  });
+</script>
+
 </div>
 </main>
 

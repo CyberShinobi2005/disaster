@@ -65,31 +65,31 @@
         placeholder="Specify quantity or additional details..."></textarea>
     </div>
 
-    <!-- Submit Button -->
-    <div class="text-center">
-      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-lg">
-        Submit Offer
-      </button>
-    </div>
-  </form>
+<div class="text-center">
+  <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-lg">
+    Submit Offer
+  </button>
+  <!-- Message button ke niche -->
+  <div id="offer-success" class="text-green-600 font-semibold mt-2 hidden">Offer submitted successfully!</div>
 </div>
 
-  <script>
-    document.getElementById('offerForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+<script>
+  const offerForm = document.getElementById('offerForm');
+  const offerSuccess = document.getElementById('offer-success');
 
-      const name = document.getElementById('name').value;
-      const contact = document.getElementById('contact').value;
-      const location = document.getElementById('location').value;
-      const resource = document.getElementById('resource').value;
-      const details = document.getElementById('details').value;
+  offerForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Form submit ko prevent kare
+    offerSuccess.classList.remove('hidden'); // Message show kare
+    offerForm.reset(); // Form reset kare
 
-      alert(`Offer Submitted!\n\nName: ${name}\nContact: ${contact}\nLocation: ${location}\nResource: ${resource}\nDetails: ${details}`);
-
-      // Backend submission logic can go here
-      this.reset();
-    });
-  </script>
+    // 3 second ke baad message hide ho jaye
+    setTimeout(() => {
+      offerSuccess.classList.add('hidden');
+    }, 3000);
+  });
+</script>
+  </form>
+</div>
 
 </body>
 </html>

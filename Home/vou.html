@@ -210,50 +210,93 @@
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 <div class="max-w-2xl mx-auto">
 <h2 class="text-3xl sm:text-4xl font-bold text-text-light dark:text-text-dark text-center">Join as a Volunteer</h2>
-<form class="mt-12 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-<div class="sm:col-span-2">
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Full Name</label>
-<div class="mt-1">
-<input autocomplete="name" class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="full-name" name="full-name" type="text"/>
-</div>
-</div>
-<div class="sm:col-span-2">
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="contact">Contact (Email or Phone)</label>
-<div class="mt-1">
-<input autocomplete="tel" class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="contact" name="contact" type="text"/>
-</div>
-</div>
-<div class="sm:col-span-2">
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="skills">Skills (e.g., medical, driving, cooking)</label>
-<div class="mt-1">
-<input class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="skills" name="skills" type="text"/>
-</div>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="availability">Availability</label>
-<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="availability" name="availability">
-<option>Weekends</option>
-<option>Weekdays</option>
-<option>Flexible</option>
-</select>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="preferred-role">Preferred Role</label>
-<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="preferred-role" name="preferred-role">
-<option>Any</option>
-<option>Food Distribution</option>
-<option>Medical Support</option>
-<option>Logistics</option>
-<option>Shelter Assistance</option>
-<option>Awareness Campaigns</option>
-</select>
-</div>
-<div class="sm:col-span-2">
-<button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">
-                                    Join as Volunteer
-                                </button>
-</div>
+<form id="volunteerForm" class="mt-12 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Full Name</label>
+    <div class="mt-1">
+      <input autocomplete="name" class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="full-name" name="full-name" type="text"/>
+    </div>
+  </div>
+
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="contact">Contact (Email or Phone)</label>
+    <div class="mt-1">
+      <input autocomplete="tel" class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="contact" name="contact" type="text"/>
+    </div>
+  </div>
+
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="skills">Skills (e.g., medical, driving, cooking)</label>
+    <div class="mt-1">
+      <input class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="skills" name="skills" type="text"/>
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="availability">Availability</label>
+    <select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="availability" name="availability">
+      <option>Weekends</option>
+      <option>Weekdays</option>
+      <option>Flexible</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="preferred-role">Preferred Role</label>
+    <select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="preferred-role" name="preferred-role">
+      <option>Any</option>
+      <option>Food Distribution</option>
+      <option>Medical Support</option>
+      <option>Logistics</option>
+      <option>Shelter Assistance</option>
+      <option>Awareness Campaigns</option>
+    </select>
+  </div>
+
+  <div class="sm:col-span-2">
+    <button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">
+      Join as Volunteer
+    </button>
+    <!-- Message div button ke niche -->
+    <div id="volunteerMessage" class="mt-4 font-medium text-center"></div>
+  </div>
 </form>
+
+<script>
+  const volunteerForm = document.getElementById('volunteerForm');
+  const messageDiv = document.getElementById('volunteerMessage');
+
+  volunteerForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById('full-name').value.trim();
+    const contact = document.getElementById('contact').value.trim();
+    const skills = document.getElementById('skills').value.trim();
+    const availability = document.getElementById('availability').value;
+    const preferredRole = document.getElementById('preferred-role').value;
+
+    if (!fullName || !contact || !skills) {
+      messageDiv.textContent = 'Please fill in all required fields!';
+      messageDiv.style.color = 'red';
+    } else {
+      const volunteerData = { fullName, contact, skills, availability, preferredRole };
+      console.log('Volunteer Data:', volunteerData);
+
+      messageDiv.textContent = 'Thank you for joining as a volunteer!';
+      messageDiv.style.color = 'green';
+
+      // Reset form
+      volunteerForm.reset();
+    }
+
+    // Message 3 second ke liye show ho aur phir disappear
+    setTimeout(() => {
+      messageDiv.textContent = '';
+    }, 3000);
+  });
+</script>
+
+
 </div>
 </div>
 </section>

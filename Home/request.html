@@ -116,49 +116,73 @@
 </div>
 <div class="bg-card-light dark:bg-card-dark p-8 sm:p-12 rounded-2xl shadow-lg">
 <h2 class="text-3xl sm:text-4xl font-bold text-center text-text-light dark:text-text-dark mb-8">Help Request Form</h2>
-<form class="grid grid-cols-1 gap-y-6">
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Full Name</label>
-<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="full-name" name="full-name" placeholder="Enter your full name" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-number">Phone Number / WhatsApp</label>
-<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="phone-number" name="phone-number" placeholder="Enter your phone or WhatsApp number" type="tel"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Email (Optional)</label>
-<input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="email" name="email" placeholder="Enter your email address" type="email"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="location">Current Location</label>
-<div class="mt-1 flex gap-2">
-<input class="block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="location" name="location" placeholder="Enter your address or drop a pin" type="text"/>
-<button class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="button">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span class="hidden sm:inline">Use My Location</span>
-</button>
-</div>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="help-type">Type of Help Needed</label>
-<select class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="help-type" name="help-type">
-<option>Please select...</option>
-<option value="food">🍲 Food</option>
-<option value="shelter">🏠 Shelter</option>
-<option value="medical">⚕️ Medical Aid</option>
-<option value="rescue">🆘 Rescue</option>
-<option value="clothing">👕 Clothing</option>
-<option value="other">📋 Other</option>
-</select>
-</div>
-<div>
-<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="notes">Additional Notes</label>
-<textarea class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="notes" name="notes" placeholder="Any other details? e.g., number of people, specific needs..." rows="4"></textarea>
-</div>
-<button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-xl font-bold rounded-lg shadow-sm text-white bg-emergency hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emergency dark:focus:ring-offset-background-dark" type="submit">
-                                Submit Request
-                            </button>
+<form id="helpForm" class="grid grid-cols-1 gap-y-6">
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="full-name">Full Name</label>
+    <input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="full-name" name="full-name" placeholder="Enter your full name" type="text"/>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="phone-number">Phone Number / WhatsApp</label>
+    <input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="phone-number" name="phone-number" placeholder="Enter your phone or WhatsApp number" type="tel"/>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Email (Optional)</label>
+    <input class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="email" name="email" placeholder="Enter your email address" type="email"/>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="location">Current Location</label>
+    <div class="mt-1 flex gap-2">
+      <input class="block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="location" name="location" placeholder="Enter your address or drop a pin" type="text"/>
+      <button class="flex-shrink-0 inline-flex items-center gap-2 px-4 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="button">
+        <span class="material-symbols-outlined text-sm">location_on</span>
+        <span class="hidden sm:inline">Use My Location</span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="help-type">Type of Help Needed</label>
+    <select class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="help-type" name="help-type">
+      <option>Please select...</option>
+      <option value="food">🍲 Food</option>
+      <option value="shelter">🏠 Shelter</option>
+      <option value="medical">⚕️ Medical Aid</option>
+      <option value="rescue">🆘 Rescue</option>
+      <option value="clothing">👕 Clothing</option>
+      <option value="other">📋 Other</option>
+    </select>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="notes">Additional Notes</label>
+    <textarea class="mt-1 block w-full text-lg px-4 py-3 rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary" id="notes" name="notes" placeholder="Any other details? e.g., number of people, specific needs..." rows="4"></textarea>
+  </div>
+  
+  <button class="w-full justify-center flex items-center gap-2 px-6 py-4 border border-transparent text-xl font-bold rounded-lg shadow-sm text-white bg-emergency hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emergency dark:focus:ring-offset-background-dark" type="submit">
+    Submit Request
+  </button>
+  
+  <!-- Message yaha show hoga -->
+  <p id="successMessage" class="hidden mt-3 text-green-600 text-lg font-medium">✅ Submit your request</p>
 </form>
+
+<script>
+  const form = document.getElementById("helpForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Real submit stop
+
+    // Message show karo
+    successMessage.classList.remove("hidden");
+
+    // Form reset karo
+    form.reset();
+
+    // 3 second baad message hide ho jaye
+    setTimeout(() => {
+      successMessage.classList.add("hidden");
+    }, 3000);
+  });
+</script>
 </div>
 </div>
 </div>
@@ -168,10 +192,21 @@
 <div class="text-center">
 <h2 class="text-2xl sm:text-3xl font-bold text-text-light dark:text-text-dark">In Immediate Danger?</h2>
 <p class="mt-2 text-lg text-subtle-light dark:text-subtle-dark">If you are in a life-threatening situation, call the emergency helpline now.</p>
-<a class="mt-6 inline-flex items-center gap-3 px-8 py-4 bg-emergency text-white font-bold text-xl rounded-lg shadow-lg hover:bg-red-700 transition-colors" href="tel:1800-XXX-XXXX">
-<span class="material-symbols-outlined">call</span>
-Call Helpline Now
+<a id="helplineBtn" 
+   class="mt-6 inline-flex items-center gap-3 px-8 py-4 bg-emergency text-white font-bold text-xl rounded-lg shadow-lg hover:bg-red-700 transition-colors" 
+   href="tel:1800-XXX-XXXX">
+   <span class="material-symbols-outlined">call</span>
+   Call Helpline Now
 </a>
+
+<script>
+  const helplineBtn = document.getElementById("helplineBtn");
+
+  helplineBtn.addEventListener("click", function() {
+    alert("📞 Dialing Helpline...");
+    // Browser fir tel: link execute karega aur phone app open ho jayegi
+  });
+</script>
 </div>
 </div>
 </section>
