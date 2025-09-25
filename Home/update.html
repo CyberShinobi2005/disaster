@@ -140,27 +140,35 @@ Date
 <script>
 async function fetchNews() {
   try {
-    // Yaha apni API URL daalein
-    const response = await fetch('https://newsapi.org/v2/everything'); 
+    // Apna NewsAPI key yaha daalein
+    const apiKey = "3b2983734ba54f57bfa642be1e2377f5";  // <-- Replace this with your NewsAPI key
+    // Query: India ke disaster related news
+    const url = `https://newsapi.org/v2/everything?q=India+disaster&language=en&sortBy=publishedAt&pageSize=6&apiKey=${apiKey}`;
+
+    const response = await fetch(url);
     const data = await response.json();
 
     const newsContainer = document.getElementById('news-container');
     newsContainer.innerHTML = '';
 
-    data.articles.forEach(article => {
-      const newsCard = document.createElement('div');
-      newsCard.className = 'bg-white/30 dark:bg-black/20 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 flex flex-col';
-      newsCard.innerHTML = `
-        <img alt="${article.title}" class="h-48 w-full object-cover" src="${article.image}">
-        <div class="p-6 flex-grow flex flex-col">
-          <div class="uppercase tracking-wide text-xs text-red-500 font-semibold mb-1">Disaster Alerts</div>
-          <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">${article.title}</h4>
-          <p class="text-gray-600 dark:text-gray-400 text-sm flex-grow">Stay informed about latest updates in your area.</p>
-          <a class="mt-4 text-primary font-semibold hover:underline self-start" href="#">Read More →</a>
-        </div>
-      `;
-      newsContainer.appendChild(newsCard);
-    });
+    if (data.articles && data.articles.length > 0) {
+      data.articles.forEach(article => {
+        const newsCard = document.createElement('div');
+        newsCard.className = 'bg-white/30 dark:bg-black/20 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 flex flex-col';
+        newsCard.innerHTML = `
+          <img alt="${article.title}" class="h-48 w-full object-cover" src="${article.urlToImage || 'https://via.placeholder.com/400x200'}">
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="uppercase tracking-wide text-xs text-red-500 font-semibold mb-1">Disaster Alert</div>
+            <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">${article.title}</h4>
+            <p class="text-gray-600 dark:text-gray-400 text-sm flex-grow">${article.description || 'No description available.'}</p>
+            <a class="mt-4 text-primary font-semibold hover:underline self-start" href="${article.url}" target="_blank">Read More →</a>
+          </div>
+        `;
+        newsContainer.appendChild(newsCard);
+      });
+    } else {
+      newsContainer.innerHTML = '<p class="text-gray-600 dark:text-gray-400">No disaster news available for India at the moment.</p>';
+    }
 
   } catch (error) {
     console.error('Error fetching news:', error);
@@ -169,6 +177,7 @@ async function fetchNews() {
   }
 }
 
+// Call the function
 fetchNews();
 </script>
 
